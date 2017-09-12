@@ -33,19 +33,31 @@ class LoadingUI extends egret.Sprite {
         super();
         this.createView();
     }
-
-    private textField:egret.TextField;
-
+    private loadBg:egret.Bitmap;
+    public background:egret.Bitmap;
+    public bar:egret.Bitmap;
+    public barMask:egret.Rectangle;
+    public reverse = false;
     private createView():void {
-        this.textField = new egret.TextField();
-        this.addChild(this.textField);
-        this.textField.y = 300;
-        this.textField.width = 480;
-        this.textField.height = 100;
-        this.textField.textAlign = "center";
+        this.loadBg=new egret.Bitmap(RES.getRes("loadBg"));
+        this.addChild(this.loadBg);
+        this.background = new egret.Bitmap(RES.getRes("barBg"));
+        this.bar = new egret.Bitmap(RES.getRes("bar"));
+        this.addChild(this.background);
+        this.background.x=120;
+        this.background.y=400;
+        this.addChild(this.bar);
+        this.bar.x = (this.background.width - this.bar.width) / 2+120;
+        this.bar.y = (this.background.height - this.bar.height) / 2+400;
+        this.barMask = new egret.Rectangle(0, 0, this.bar.width, this.bar.height);
+        this.barMask.x=120;
+        this.barMask.y=400;
+        this.bar.mask = this.barMask;
     }
 
     public setProgress(current:number, total:number):void {
-        this.textField.text = `Loading...${current}/${total}`;
+        var _p:number=current/total;
+        this.barMask = new egret.Rectangle(0, 0, (this.reverse ? (1 - _p) : _p) * this.bar.width, this.bar.height);
+        this.bar.mask = this.barMask;
     }
 }
