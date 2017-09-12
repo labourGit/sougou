@@ -35,17 +35,46 @@ class LoadingUI extends egret.Sprite {
     }
 
     private textField:egret.TextField;
+    private loadBg:egret.Bitmap;
+    private progress:ProgressBar;
 
+    public background:egret.Bitmap;
+    public bar:egret.Bitmap;
+    public barMask:egret.Rectangle;
+    public reverse = false;
     private createView():void {
-        this.textField = new egret.TextField();
-        this.addChild(this.textField);
-        this.textField.y = 300;
-        this.textField.width = 480;
-        this.textField.height = 100;
-        this.textField.textAlign = "center";
+        this.loadBg=new egret.Bitmap(RES.getRes("loadBg"));
+        this.addChild(this.loadBg);
+//        this.textField = new egret.TextField();
+//        this.addChild(this.textField);
+//        this.textField.y = 300;
+//        this.textField.width = 480;
+//        this.textField.height = 100;
+//        this.textField.textAlign = "center";
+        //this.progress=new ProgressBar("barBg","bar");
+
+        this.background = new egret.Bitmap(RES.getRes("barBg"));
+        this.bar = new egret.Bitmap(RES.getRes("bar"));
+        this.addChild(this.background);
+        this.background.x=120;
+        this.background.y=400;
+        this.addChild(this.bar);
+        this.bar.x = (this.background.width - this.bar.width) / 2+120;
+        this.bar.y = (this.background.height - this.bar.height) / 2+400;
+        this.barMask = new egret.Rectangle(0, 0, this.bar.width, this.bar.height);
+        this.barMask.x=120;
+        this.barMask.y=400;
+        this.bar.mask = this.barMask;
     }
 
     public setProgress(current:number, total:number):void {
-        this.textField.text = `Loading...${current}/${total}`;
+        //this.textField.text = `Loading...${current}/${total}`;
+        // 传入 进度条纹理名称 进度条背景纹理名称
+        //var progress=new ProgressBar("barBg","bar");
+//设置进度 0-1
+//        this.progress.setProgress(current/total);
+        var _p:number=current/total;
+        this.barMask = new egret.Rectangle(0, 0, (this.reverse ? (1 - _p) : _p) * this.bar.width, this.bar.height);
+        this.bar.mask = this.barMask;
     }
 }
