@@ -1,8 +1,16 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,cardbg_jpg",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,cardbg_jpg,loading_0_png",
 			"name": "preload"
+		},
+		{
+			"keys": "loading_bg_jpg,loading_2_png,loading_1_png,barBg_png,bar_png,loading_0_png,LoadingUI_exml",
+			"name": "loading"
+		},
+		{
+			"keys": "cloud_png,school_png,schoolBg_jpg,board_png,teacher_1_png,teacher1_hand_png,dialog1_png,ring_png,teacher1_hand0_png,teacher1_hand1_png,teacher1_hand2_png,teacher1_hand3_png,teacher1_hand6_png,teacher1_hand4_png,teacher1_hand5_png",
+			"name": "p1"
 		}
 	],
 	"resources": [
@@ -132,14 +140,124 @@
 			"name": "egret_icon_png"
 		},
 		{
-			"name": "description_json",
+			"url": "config/description.json",
 			"type": "json",
-			"url": "config/description.json"
+			"name": "description_json"
 		},
 		{
-			"name": "cardbg_jpg",
+			"url": "assets/cardbg.jpg",
 			"type": "image",
-			"url": "assets/cardbg.jpg"
+			"name": "cardbg_jpg"
+		},
+		{
+			"url": "assets/loading_bg.jpg",
+			"type": "image",
+			"name": "loading_bg_jpg"
+		},
+		{
+			"url": "assets/loading_2.png",
+			"type": "image",
+			"name": "loading_2_png"
+		},
+		{
+			"url": "assets/loading_1.png",
+			"type": "image",
+			"name": "loading_1_png"
+		},
+		{
+			"url": "assets/bar.png",
+			"type": "image",
+			"name": "bar_png"
+		},
+		{
+			"url": "assets/barBg.png",
+			"type": "image",
+			"name": "barBg_png"
+		},
+		{
+			"url": "assets/loading_0.png",
+			"type": "image",
+			"name": "loading_0_png"
+		},
+		{
+			"url": "assets/LoadingUI.exml",
+			"type": "bin",
+			"name": "LoadingUI_exml"
+		},
+		{
+			"url": "assets/cloud.png",
+			"type": "image",
+			"name": "cloud_png"
+		},
+		{
+			"url": "assets/school.png",
+			"type": "image",
+			"name": "school_png"
+		},
+		{
+			"url": "assets/schoolBg.jpg",
+			"type": "image",
+			"name": "schoolBg_jpg"
+		},
+		{
+			"url": "assets/board.png",
+			"type": "image",
+			"name": "board_png"
+		},
+		{
+			"url": "assets/teacher_1.png",
+			"type": "image",
+			"name": "teacher_1_png"
+		},
+		{
+			"url": "assets/teacher1_hand.png",
+			"type": "image",
+			"name": "teacher1_hand_png"
+		},
+		{
+			"url": "assets/dialog1.png",
+			"type": "image",
+			"name": "dialog1_png"
+		},
+		{
+			"url": "assets/ring.png",
+			"type": "image",
+			"name": "ring_png"
+		},
+		{
+			"url": "assets/teacher1_hand0.png",
+			"type": "image",
+			"name": "teacher1_hand0_png"
+		},
+		{
+			"url": "assets/teacher1_hand1.png",
+			"type": "image",
+			"name": "teacher1_hand1_png"
+		},
+		{
+			"url": "assets/teacher1_hand2.png",
+			"type": "image",
+			"name": "teacher1_hand2_png"
+		},
+		{
+			"url": "assets/teacher1_hand3.png",
+			"type": "image",
+			"name": "teacher1_hand3_png"
+		},
+		{
+			"url": "assets/teacher1_hand6.png",
+			"type": "image",
+			"name": "teacher1_hand6_png"
+		},
+		{
+			"url": "assets/teacher1_hand4.png",
+			"type": "image",
+			"name": "teacher1_hand4_png"
+		},
+		{
+			"url": "assets/teacher1_hand5.png",
+			"type": "image",
+			"name": "teacher1_hand5_png"
 		}
 	]
 }

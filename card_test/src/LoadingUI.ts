@@ -27,34 +27,49 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////
 
-class LoadingUI extends egret.Sprite {
+class LoadingUI extends eui.Component {
 
     public constructor() {
         super();
-        this.createView();
+        this.skinName='LoadingUIexml'
+        this.mcCtrl = new MovieclipController(this.img,12, MovieclipController.makeResLoop('loading_{0}_png', 2, 0));
+        this.mcCtrl.play(true);
+        // this.createView();
     }
 
     private textField:egret.TextField;
     private loadBg:egret.Bitmap;
-    private progress:ProgressBar;
 
     public background:egret.Bitmap;
     public bar:egret.Bitmap;
     public barMask:egret.Rectangle;
     public reverse = false;
-    private createView():void {
-        this.loadBg=new egret.Bitmap(RES.getRes("loadBg"));
+    public img:eui.Image;
+    private mcCtrl: MovieclipController;
+    public childrenCreated(){
+        this.loadBg=new egret.Bitmap(RES.getRes("loading_bg_jpg"));
         this.addChild(this.loadBg);
-//        this.textField = new egret.TextField();
-//        this.addChild(this.textField);
-//        this.textField.y = 300;
-//        this.textField.width = 480;
-//        this.textField.height = 100;
-//        this.textField.textAlign = "center";
-        //this.progress=new ProgressBar("barBg","bar");
 
-        this.background = new egret.Bitmap(RES.getRes("barBg"));
-        this.bar = new egret.Bitmap(RES.getRes("bar"));
+        // // this.mcCtrl = new MovieclipController(this.img,12, MovieclipController.makeResLoop('loading_{0}_png', 2, 0));
+        // // this.mcCtrl.play(true);
+        var boom:BitmapMovie = new BitmapMovie();
+
+		//使用整张序列图初始化
+		// var bm:egret.Bitmap = new egret.Bitmap(RES.getRes("boom_png"));
+		// boom.initByBitmap(bm,4,5,0,18,192,192);
+
+		//使用零散的多张序列图初始化
+		boom.initByTile("loading_", "png",3);
+
+		//设置位置
+		boom.x = (this.stage.stageWidth - boom.width)/2;
+		boom.y = (this.stage.stageHeight - boom.height)/2-200;
+		boom.delay = 1000/10;
+		this.addChild(boom);
+        boom.play(10);
+
+        this.background = new egret.Bitmap(RES.getRes("barBg_png"));
+        this.bar = new egret.Bitmap(RES.getRes("bar_png"));
         this.addChild(this.background);
         this.background.x=120;
         this.background.y=400;
@@ -65,7 +80,14 @@ class LoadingUI extends egret.Sprite {
         this.barMask.x=120;
         this.barMask.y=400;
         this.bar.mask = this.barMask;
-    }
+
+	}
+
+	//所有播放完成
+
+
+	//播放完一次
+
 
     public setProgress(current:number, total:number):void {
         //this.textField.text = `Loading...${current}/${total}`;

@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -27,30 +27,28 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////
 
+module particle {
+    export class GravityParticle extends Particle {
+        public startX:number;
+        public startY:number;
+        public velocityX:number;
+        public velocityY:number;
+        public radialAcceleration:number;
+        public tangentialAcceleration:number;
+        public rotationDelta:number;
+        public scaleDelta:number;
+        public alphaDelta:number;
 
-class AssetAdapter implements eui.IAssetAdapter {
-    /**
-     * @language zh_CN
-     * 解析素材
-     * @param source 待解析的新素材标识符
-     * @param compFunc 解析完成回调函数，示例：callBack(content:any,source:string):void;
-     * @param thisObject callBack的 this 引用
-     */
-    public getAsset(source: string, compFunc:Function, thisObject: any): void {
-        function onGetRes(data: any): void {
-            compFunc.call(thisObject, data, source);
-        }
-        if (RES.hasRes(source)) {
-            let data = RES.getRes(source);
-            if (data) {
-                onGetRes(data);
-            }
-            else {
-                RES.getResAsync(source, onGetRes, this);
-            }
-        }
-        else {
-            RES.getResByUrl(source, onGetRes, this, RES.ResourceItem.TYPE_IMAGE);
+        public reset():void {
+            super.reset();
+            this.startX = 0;
+            this.startY = 0;
+            this.velocityX = 0;
+            this.velocityY = 0;
+            this.radialAcceleration = 0;
+            this.tangentialAcceleration = 0;
+            this.rotationDelta = 0;
+            this.scaleDelta = 0;
         }
     }
 }

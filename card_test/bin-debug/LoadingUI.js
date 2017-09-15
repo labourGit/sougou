@@ -38,20 +38,56 @@ var LoadingUI = (function (_super) {
     __extends(LoadingUI, _super);
     function LoadingUI() {
         var _this = _super.call(this) || this;
-        _this.createView();
+        _this.reverse = false;
+        _this.skinName = 'LoadingUIexml';
+        _this.mcCtrl = new MovieclipController(_this.img, 12, MovieclipController.makeResLoop('loading_{0}_png', 2, 0));
+        _this.mcCtrl.play(true);
         return _this;
+        // this.createView();
     }
-    LoadingUI.prototype.createView = function () {
-        this.textField = new egret.TextField();
-        this.addChild(this.textField);
-        this.textField.y = 300;
-        this.textField.width = 480;
-        this.textField.height = 100;
-        this.textField.textAlign = "center";
+    LoadingUI.prototype.childrenCreated = function () {
+        this.loadBg = new egret.Bitmap(RES.getRes("loading_bg_jpg"));
+        this.addChild(this.loadBg);
+        // // this.mcCtrl = new MovieclipController(this.img,12, MovieclipController.makeResLoop('loading_{0}_png', 2, 0));
+        // // this.mcCtrl.play(true);
+        var boom = new BitmapMovie();
+        //使用整张序列图初始化
+        // var bm:egret.Bitmap = new egret.Bitmap(RES.getRes("boom_png"));
+        // boom.initByBitmap(bm,4,5,0,18,192,192);
+        //使用零散的多张序列图初始化
+        boom.initByTile("loading_", "png", 3);
+        //设置位置
+        boom.x = (this.stage.stageWidth - boom.width) / 2;
+        boom.y = (this.stage.stageHeight - boom.height) / 2 - 200;
+        boom.delay = 1000 / 10;
+        this.addChild(boom);
+        boom.play(10);
+        this.background = new egret.Bitmap(RES.getRes("barBg_png"));
+        this.bar = new egret.Bitmap(RES.getRes("bar_png"));
+        this.addChild(this.background);
+        this.background.x = 120;
+        this.background.y = 400;
+        this.addChild(this.bar);
+        this.bar.x = (this.background.width - this.bar.width) / 2 + 120;
+        this.bar.y = (this.background.height - this.bar.height) / 2 + 400;
+        this.barMask = new egret.Rectangle(0, 0, this.bar.width, this.bar.height);
+        this.barMask.x = 120;
+        this.barMask.y = 400;
+        this.bar.mask = this.barMask;
     };
+    //所有播放完成
+    //播放完一次
     LoadingUI.prototype.setProgress = function (current, total) {
-        this.textField.text = "Loading..." + current + "/" + total;
+        //this.textField.text = `Loading...${current}/${total}`;
+        // 传入 进度条纹理名称 进度条背景纹理名称
+        //var progress=new ProgressBar("barBg","bar");
+        //设置进度 0-1
+        //        this.progress.setProgress(current/total);
+        var _p = current / total;
+        this.barMask = new egret.Rectangle(0, 0, (this.reverse ? (1 - _p) : _p) * this.bar.width, this.bar.height);
+        this.bar.mask = this.barMask;
     };
     return LoadingUI;
-}(egret.Sprite));
+}(eui.Component));
 __reflect(LoadingUI.prototype, "LoadingUI");
+//# sourceMappingURL=LoadingUI.js.map

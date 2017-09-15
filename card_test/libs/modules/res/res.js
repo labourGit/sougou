@@ -1035,7 +1035,7 @@ var RES;
             /**
              * 最大并发加载数
              */
-            _this.thread = 4;
+            _this.thread = 2;
             /**
              * 正在加载的线程计数
              */
