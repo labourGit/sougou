@@ -94,7 +94,7 @@ var Main = (function (_super) {
      * Create a game scene
      */
     Main.prototype.createGameScene1 = function () {
-        // this.loadps();
+        this.loadps();
         // window['playSound']('resource/assets/bg.mp3', 'loop');
         this.game = new Game();
         this.addChild(this.game);

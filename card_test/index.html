@@ -12,7 +12,7 @@
     <style>
         html, body {
             -ms-touch-action: none;
-            background: #888888;
+            background: #ffffff;
             padding: 0;
             border: 0;
             margin: 0;
@@ -50,12 +50,23 @@
 
     <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
     <!--game_files_start-->
-	<script egret="game" src="bin-debug/init/PageManager.js"></script>
+	<script egret="game" src="bin-debug/init/ImageDrawTool.js"></script>
 	<script egret="game" src="bin-debug/BitmapMovie.js"></script>
-	<script egret="game" src="bin-debug/game/Board.js"></script>
+	<script egret="game" src="bin-debug/game/class/ClassRoom.js"></script>
+	<script egret="game" src="bin-debug/game/class/Roles.js"></script>
+	<script egret="game" src="bin-debug/game/class/TeacherTwo.js"></script>
 	<script egret="game" src="bin-debug/game/Game.js"></script>
-	<script egret="game" src="bin-debug/game/SchoolScene.js"></script>
-	<script egret="game" src="bin-debug/game/TeacherOne.js"></script>
+	<script egret="game" src="bin-debug/game/school/Board.js"></script>
+	<script egret="game" src="bin-debug/game/school/ClickEffect.js"></script>
+	<script egret="game" src="bin-debug/game/school/School.js"></script>
+	<script egret="game" src="bin-debug/game/school/SchoolScene.js"></script>
+	<script egret="game" src="bin-debug/game/school/TeacherOne.js"></script>
+	<script egret="game" src="bin-debug/game/shop/Boardshop.js"></script>
+	<script egret="game" src="bin-debug/game/shop/Card.js"></script>
+	<script egret="game" src="bin-debug/game/shop/CardGame.js"></script>
+	<script egret="game" src="bin-debug/game/shop/ChoiceGame.js"></script>
+	<script egret="game" src="bin-debug/game/shop/Shop.js"></script>
+	<script egret="game" src="bin-debug/game/shop/TeacherThree.js"></script>
 	<script egret="game" src="bin-debug/init/ActionSheet.js"></script>
 	<script egret="game" src="bin-debug/init/AlphaYoYo.js"></script>
 	<script egret="game" src="bin-debug/init/ArrowManager.js"></script>
@@ -64,13 +75,13 @@
 	<script egret="game" src="bin-debug/init/CrossdomainLib.js"></script>
 	<script egret="game" src="bin-debug/init/CubicBezier.js"></script>
 	<script egret="game" src="bin-debug/init/EnterFrameCall.js"></script>
-	<script egret="game" src="bin-debug/init/ImageDrawTool.js"></script>
+	<script egret="game" src="bin-debug/CutImgTool.js"></script>
 	<script egret="game" src="bin-debug/init/import.js"></script>
 	<script egret="game" src="bin-debug/init/IPage.js"></script>
 	<script egret="game" src="bin-debug/init/MoveYoYo.js"></script>
 	<script egret="game" src="bin-debug/init/MovieclipController.js"></script>
 	<script egret="game" src="bin-debug/init/ObjectPool.js"></script>
-	<script egret="game" src="bin-debug/CutImgTool.js"></script>
+	<script egret="game" src="bin-debug/init/PageManager.js"></script>
 	<script egret="game" src="bin-debug/init/ScaleYoYo.js"></script>
 	<script egret="game" src="bin-debug/init/SimpleAlert.js"></script>
 	<script egret="game" src="bin-debug/init/SimpleLoading.js"></script>
@@ -98,7 +109,7 @@
          data-entry-class="Main"
          data-orientation="auto"
          data-scale-mode="fixedWidth"
-         data-frame-rate="30"
+         data-frame-rate="60"
          data-content-width="640"
          data-content-height="1050"
          data-show-paint-rect="false"

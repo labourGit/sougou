@@ -59,7 +59,7 @@ Global.eventCenter = new egret.EventDispatcher();
 /*****************************自定义逻辑变量 end *********************************/
 Global.blobKey = '_blob';
 Global.all = [
-    'p1'
+    'p2', 'p3', 'p4'
 ];
 __reflect(Global.prototype, "Global");
 //# sourceMappingURL=Global.js.map

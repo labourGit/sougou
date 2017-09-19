@@ -11,6 +11,18 @@
 		{
 			"keys": "cloud_png,school_png,schoolBg_jpg,board_png,teacher_1_png,teacher1_hand_png,dialog1_png,ring_png,teacher1_hand0_png,teacher1_hand1_png,teacher1_hand2_png,teacher1_hand3_png,teacher1_hand6_png,teacher1_hand4_png,teacher1_hand5_png",
 			"name": "p1"
+		},
+		{
+			"keys": "dialog_roleRight_png,dialog_role_png,line_png,roleRight_png,roleLeft_png,role_png,dialog_roleLeft_png,classBg_jpg",
+			"name": "p2"
+		},
+		{
+			"keys": "shop_teacher1_png,board1_png,board2_png,button1_png,garden_png,shop_beauty_png,shop_cafe_png,shop_sport_png,content_png",
+			"name": "p3"
+		},
+		{
+			"keys": "card_back_png,card_face_png",
+			"name": "p4"
 		}
 	],
 	"resources": [
@@ -258,6 +270,101 @@
 			"url": "assets/teacher1_hand5.png",
 			"type": "image",
 			"name": "teacher1_hand5_png"
+		},
+		{
+			"url": "assets/dialog_roleRight.png",
+			"type": "image",
+			"name": "dialog_roleRight_png"
+		},
+		{
+			"url": "assets/dialog_role.png",
+			"type": "image",
+			"name": "dialog_role_png"
+		},
+		{
+			"url": "assets/line.png",
+			"type": "image",
+			"name": "line_png"
+		},
+		{
+			"url": "assets/roleRight.png",
+			"type": "image",
+			"name": "roleRight_png"
+		},
+		{
+			"url": "assets/roleLeft.png",
+			"type": "image",
+			"name": "roleLeft_png"
+		},
+		{
+			"url": "assets/role.png",
+			"type": "image",
+			"name": "role_png"
+		},
+		{
+			"url": "assets/dialog_roleLeft.png",
+			"type": "image",
+			"name": "dialog_roleLeft_png"
+		},
+		{
+			"url": "assets/classBg.jpg",
+			"type": "image",
+			"name": "classBg_jpg"
+		},
+		{
+			"url": "assets/shop_teacher1.png",
+			"type": "image",
+			"name": "shop_teacher1_png"
+		},
+		{
+			"url": "assets/board1.png",
+			"type": "image",
+			"name": "board1_png"
+		},
+		{
+			"url": "assets/board2.png",
+			"type": "image",
+			"name": "board2_png"
+		},
+		{
+			"url": "assets/button1.png",
+			"type": "image",
+			"name": "button1_png"
+		},
+		{
+			"url": "assets/garden.png",
+			"type": "image",
+			"name": "garden_png"
+		},
+		{
+			"url": "assets/shop_beauty.png",
+			"type": "image",
+			"name": "shop_beauty_png"
+		},
+		{
+			"url": "assets/shop_cafe.png",
+			"type": "image",
+			"name": "shop_cafe_png"
+		},
+		{
+			"url": "assets/shop_sport.png",
+			"type": "image",
+			"name": "shop_sport_png"
+		},
+		{
+			"url": "assets/content.png",
+			"type": "image",
+			"name": "content_png"
+		},
+		{
+			"url": "assets/card_back.png",
+			"type": "image",
+			"name": "card_back_png"
+		},
+		{
+			"url": "assets/card_face.png",
+			"type": "image",
+			"name": "card_face_png"
 		}
 	]
 }

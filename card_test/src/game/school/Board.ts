@@ -38,6 +38,6 @@ class Board extends egret.Sprite{
     }
     public del(){
         this.removeChild(this.tip);
-        this.removeChild(this.board)
+        this.removeChild(this.board);
     }
 }

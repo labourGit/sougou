@@ -104,7 +104,7 @@ class Main extends egret.DisplayObjectContainer {
      */
     private createGameScene1(): void {
         
-        // this.loadps();
+        this.loadps();
         // window['playSound']('resource/assets/bg.mp3', 'loop');
         this.game= new Game();
         this.addChild(this.game);

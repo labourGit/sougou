@@ -15,29 +15,23 @@ var Game = (function (_super) {
     }
     Game.prototype.createView = function () {
         //学校-牌子-打铃
-        this.schoolScene = new SchoolScene();
-        this.addChild(this.schoolScene);
-        this.ring = new egret.Bitmap(RES.getRes("ring_png"));
-        this.addChild(this.ring);
-        this.ring.alpha = 0;
-        var board = new Board();
-        this.addChild(board);
-        egret.setTimeout(function () {
-            board.del();
-        }, this, 2000);
-        egret.setTimeout(function () {
-            var ani = egret.Tween.get(this.ring).to({ alpha: 1 }, 100).wait(1900).to({ alpha: 0 }, 10).call(this.secScene, this);
-            ShakeTool.getInstance().shakeObj(this.schoolScene, 2, 20, 5);
-        }, this, 2500);
+        this.school = new School();
+        this.addChild(this.school);
     };
-    Game.prototype.secScene = function () {
-        //老师表情
-        this.teacher = new TeacherOne();
-        this.addChild(this.teacher);
-        this.teacher.init();
+    Game.prototype.del_school = function () {
+        this.removeChild(this.school);
     };
     Game.prototype.reScene = function () {
-        this.alpha = 0;
+        this.classroom = new ClassRoom();
+        this.addChild(this.classroom);
+    };
+    Game.prototype.del_class = function () {
+        this.removeChild(this.classroom);
+    };
+    Game.prototype.shopScene = function () {
+        this.choiceGame = new ChoiceGame();
+        this.addChild(this.choiceGame);
+        this.choiceGame.init();
     };
     return Game;
 }(egret.DisplayObjectContainer));
