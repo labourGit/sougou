@@ -26,6 +26,16 @@ var ChoiceGame = (function (_super) {
         this.cardGame = new CardGame();
         this.addChild(this.cardGame);
     };
+    ChoiceGame.prototype.del_cardGame = function () {
+        this.removeChild(this.cardGame);
+        this.xuanGame = new XuanGame();
+        this.addChild(this.xuanGame);
+    };
+    ChoiceGame.prototype.reset_xuan = function () {
+        this.removeChild(this.xuanGame);
+        this.xuanGame = new XuanGame();
+        this.addChild(this.xuanGame);
+    };
     return ChoiceGame;
 }(egret.DisplayObjectContainer));
 __reflect(ChoiceGame.prototype, "ChoiceGame");

@@ -41,7 +41,7 @@ class Global {
     public static blobKey: string = '_blob';
 
     public static all: string[] = [
-        'p2','p3','p4'
+        'p2','p3','p4','p5'
         // 'p2','p3','p4'
     ];
    

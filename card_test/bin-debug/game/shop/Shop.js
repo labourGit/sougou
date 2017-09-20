@@ -39,7 +39,7 @@ var Shop = (function (_super) {
     }
     Shop.prototype.init = function () {
         this.shop_beauty.filters = [];
-        this.board = new Boardshop();
+        this.board = new Boardshop("请选择下面一家商铺");
         this.addChild(this.board);
         //
         this.isFirst = true;

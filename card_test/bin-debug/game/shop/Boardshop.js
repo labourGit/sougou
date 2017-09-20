@@ -9,8 +9,9 @@ var __extends = (this && this.__extends) || function (d, b) {
 //选店
 var Boardshop = (function (_super) {
     __extends(Boardshop, _super);
-    function Boardshop() {
+    function Boardshop(string) {
         var _this = _super.call(this) || this;
+        _this.str = string;
         _this.board = new egret.Bitmap(RES.getRes("board1_png"));
         _this.board.anchorOffsetX = _this.board.width / 2;
         _this.board.anchorOffsetY = _this.board.height / 2;
@@ -22,22 +23,22 @@ var Boardshop = (function (_super) {
         _this.board.alpha = 0;
         var ani = egret.Tween.get(_this.board).to({ scaleX: 1, scaleY: 1, alpha: 1 }, 800, egret.Ease.elasticInOut).call(_this.show, _this);
         return _this;
-        //
+        //       
     }
     Boardshop.prototype.show = function () {
         this.tip = new egret.TextField();
         this.tip.x = 320;
         this.tip.y = 100;
-        this.tip.size = 35;
+        this.tip.size = 30;
         this.tip.textColor = 0x000000;
         this.tip.fontFamily = "fzdhjt";
-        this.tip.width = this.board.width;
+        this.tip.width = this.board.width - 100;
         this.tip.height = this.board.height;
         this.tip.anchorOffsetX = this.tip.width / 2;
         this.tip.anchorOffsetY = this.tip.height / 2;
         this.tip.textAlign = egret.HorizontalAlign.CENTER;
         this.tip.verticalAlign = egret.VerticalAlign.MIDDLE;
-        this.tip.text = "请选择下面一家商铺";
+        this.tip.text = this.str;
         this.addChild(this.tip);
         // TyperText.getInstance().typerEffect(this.tip,"",100);
     };

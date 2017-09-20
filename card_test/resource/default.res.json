@@ -21,8 +21,12 @@
 			"name": "p3"
 		},
 		{
-			"keys": "card_back_png,card_face_png",
+			"keys": "card_back_png,card_face_png,sg_hero_png,dialog1_hero_png,sun_light_png,nextBtn_png",
 			"name": "p4"
+		},
+		{
+			"keys": "unhappyBtn_png,beauty_alpha_png,choiceA_png,cafe_alpha_png,choiceB_png,choiceC_png,happyBtn_png,sport_alpha_png,ss_png",
+			"name": "p5"
 		}
 	],
 	"resources": [
@@ -365,6 +369,71 @@
 			"url": "assets/card_face.png",
 			"type": "image",
 			"name": "card_face_png"
+		},
+		{
+			"url": "assets/sg_hero.png",
+			"type": "image",
+			"name": "sg_hero_png"
+		},
+		{
+			"url": "assets/dialog1_hero.png",
+			"type": "image",
+			"name": "dialog1_hero_png"
+		},
+		{
+			"url": "assets/sun_light.png",
+			"type": "image",
+			"name": "sun_light_png"
+		},
+		{
+			"url": "assets/nextBtn.png",
+			"type": "image",
+			"name": "nextBtn_png"
+		},
+		{
+			"url": "assets/unhappyBtn.png",
+			"type": "image",
+			"name": "unhappyBtn_png"
+		},
+		{
+			"url": "assets/beauty_alpha.png",
+			"type": "image",
+			"name": "beauty_alpha_png"
+		},
+		{
+			"url": "assets/choiceA.png",
+			"type": "image",
+			"name": "choiceA_png"
+		},
+		{
+			"url": "assets/cafe_alpha.png",
+			"type": "image",
+			"name": "cafe_alpha_png"
+		},
+		{
+			"url": "assets/choiceB.png",
+			"type": "image",
+			"name": "choiceB_png"
+		},
+		{
+			"url": "assets/choiceC.png",
+			"type": "image",
+			"name": "choiceC_png"
+		},
+		{
+			"url": "assets/happyBtn.png",
+			"type": "image",
+			"name": "happyBtn_png"
+		},
+		{
+			"url": "assets/sport_alpha.png",
+			"type": "image",
+			"name": "sport_alpha_png"
+		},
+		{
+			"url": "assets/ss.png",
+			"type": "image",
+			"name": "ss_png"
 		}
 	]
 }
