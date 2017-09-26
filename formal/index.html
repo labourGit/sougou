@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>搜狗商学院——商战巅峰对决</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+	<link rel="stylesheet" href="resource/orient.css" />
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #ffffff;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+    <style type="text/css">
+        @font-face{
+            font-family: 'fzdhjt';
+            src:url('./resource/fonts/fzdhjt.TTF') format('truetype');
+            font-weight: normal;
+            font-style: normal
+        } 
+        div
+        {
+            font-family: "fzdhjt"
+        }
+    </style>
+
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+    <!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.js" src-release="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.js" src-release="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.js" src-release="libs/modules/game/game.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.js" src-release="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/eui/eui.js" src-release="libs/modules/eui/eui.min.js"></script>
+	<script egret="lib" src="libs/modules/experimental/experimental.js" src-release="libs/modules/experimental/experimental.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.js" src-release="libs/modules/tween/tween.min.js"></script>
+	<!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    <!--other_libs_files_start-->
+    <script egret="lib" src="polyfill/promise.js" src-release="polyfill/promise.min.js"></script>
+    <!--other_libs_files_end-->
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+    <!--game_files_start-->
+	<script egret="game" src="bin-debug/BitmapMovie.js"></script>
+	<script egret="game" src="bin-debug/CutImgTool.js"></script>
+	<script egret="game" src="bin-debug/game/class/ClassRoom.js"></script>
+	<script egret="game" src="bin-debug/game/class/Roles.js"></script>
+	<script egret="game" src="bin-debug/game/class/TeacherTwo.js"></script>
+	<script egret="game" src="bin-debug/game/Game.js"></script>
+	<script egret="game" src="bin-debug/game/school/Board.js"></script>
+	<script egret="game" src="bin-debug/game/school/ClickEffect.js"></script>
+	<script egret="game" src="bin-debug/game/school/School.js"></script>
+	<script egret="game" src="bin-debug/game/school/SchoolScene.js"></script>
+	<script egret="game" src="bin-debug/game/school/TeacherOne.js"></script>
+	<script egret="game" src="bin-debug/game/shop/Boardshop.js"></script>
+	<script egret="game" src="bin-debug/game/shop/Card.js"></script>
+	<script egret="game" src="bin-debug/game/shop/CardGame.js"></script>
+	<script egret="game" src="bin-debug/game/shop/ChoiceGame.js"></script>
+	<script egret="game" src="bin-debug/game/shop/Hero.js"></script>
+	<script egret="game" src="bin-debug/game/shop/Hero2.js"></script>
+	<script egret="game" src="bin-debug/game/shop/LastPage.js"></script>
+	<script egret="game" src="bin-debug/game/shop/Role_fail.js"></script>
+	<script egret="game" src="bin-debug/game/shop/Shop.js"></script>
+	<script egret="game" src="bin-debug/game/shop/TeacherThree.js"></script>
+	<script egret="game" src="bin-debug/game/shop/Xuan.js"></script>
+	<script egret="game" src="bin-debug/game/shop/XuanGame.js"></script>
+	<script egret="game" src="bin-debug/init/ActionSheet.js"></script>
+	<script egret="game" src="bin-debug/init/AlphaYoYo.js"></script>
+	<script egret="game" src="bin-debug/init/ArrowManager.js"></script>
+	<script egret="game" src="bin-debug/init/AssetAdapter.js"></script>
+	<script egret="game" src="bin-debug/init/BarragePlayer.js"></script>
+	<script egret="game" src="bin-debug/init/CrossdomainLib.js"></script>
+	<script egret="game" src="bin-debug/init/CubicBezier.js"></script>
+	<script egret="game" src="bin-debug/init/EnterFrameCall.js"></script>
+	<script egret="game" src="bin-debug/init/ImageDrawTool.js"></script>
+	<script egret="game" src="bin-debug/init/import.js"></script>
+	<script egret="game" src="bin-debug/init/IPage.js"></script>
+	<script egret="game" src="bin-debug/init/MoveYoYo.js"></script>
+	<script egret="game" src="bin-debug/init/MovieclipController.js"></script>
+	<script egret="game" src="bin-debug/init/ObjectPool.js"></script>
+	<script egret="game" src="bin-debug/init/PageManager.js"></script>
+	<script egret="game" src="bin-debug/init/ScaleYoYo.js"></script>
+	<script egret="game" src="bin-debug/init/SimpleAlert.js"></script>
+	<script egret="game" src="bin-debug/init/SimpleLoading.js"></script>
+	<script egret="game" src="bin-debug/init/Toast.js"></script>
+	<script egret="game" src="bin-debug/init/UploadImageTool.js"></script>
+	<script egret="game" src="bin-debug/init/VirtualLoadingCall.js"></script>
+	<script egret="game" src="bin-debug/init/XYAPI.js"></script>
+	<script egret="game" src="bin-debug/LoadingUI.js"></script>
+	<script egret="game" src="bin-debug/Main.js"></script>
+	<script egret="game" src="bin-debug/ShakeTool.js"></script>
+	<script egret="game" src="bin-debug/ThemeAdapter.js"></script>
+	<script egret="game" src="bin-debug/TyperText.js"></script>
+	<script egret="game" src="bin-debug/Util.js"></script>
+	<script egret="game" src="bin-debug/util/ConfigVO.js"></script>
+	<script egret="game" src="bin-debug/util/FriendData.js"></script>
+	<script egret="game" src="bin-debug/util/GameConfig.js"></script>
+	<script egret="game" src="bin-debug/util/Global.js"></script>
+	<script egret="game" src="bin-debug/util/PlayerVO.js"></script>
+	<script egret="game" src="bin-debug/util/TimeChuo.js"></script>
+	<!--game_files_end-->
+</head>
+<body>
+<div id="music_btn" class="music rotate">
+			<audio id="audio" class="media-audio" src="resource/assets/music/bg.mp3" autoplay="autoplay" preload loop></audio>		
+	</div>
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="auto"
+         data-scale-mode="fixedWidth"
+         data-frame-rate="60"
+         data-content-width="640"
+         data-content-height="1050"
+         data-show-paint-rect="false"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+	<div id="orientLayer" class="mod-orient-layer" style="display: none;">
+		<div class="mod-orient-layer__content">
+			<i class="icon mod-orient-layer__icon-orient"></i>
+			<div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+		</div>
+	</div>
+    <script>
+        /**
+         * {
+         * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+         * "audioType": 0 //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+         * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+         * "retina": //是否基于devicePixelRatio缩放画布
+         * }
+         **/
+		function audioAutoPlay() {
+		    var audio = document.getElementById('audio'); //获取音乐标签的id
+		    audio.play(); //播放
+		    document.addEventListener("WeixinJSBridgeReady", function() { //监听微信准备就绪事件，只能在微信用
+			    audio.play(); //微信监听播放
+		    }, false);
+	    }
+	    audioAutoPlay();
+        egret.runEgret({renderMode:"webgl", audioType:0});
+		var windowOrientation = 'portrait';
+		var orientLayer = document.getElementById("orientLayer");
+		var orientationValue = 0;
+
+		//判断横屏竖屏
+		function checkDirect() {
+			if (document.documentElement.clientHeight >= document.documentElement.clientWidth) {
+				return "portrait";
+			} else {
+				return "landscape";
+			}
+		}
+		//显示屏幕方向提示浮层
+		function orientNotice() {
+			var orient = checkDirect();
+			if (orient == "portrait") {
+				orientLayer.style.display = "none";
+			} else {
+				orientLayer.style.display = "block";
+			}
+		}
+		function initOrient() {
+			orientNotice();
+
+			window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
+				setTimeout(orientNotice, 200);
+			}, false);
+
+			window.addEventListener('orientationchange', function(event){
+				if ( window.orientation == 180 || window.orientation == 0 ) {
+					windowOrientation = browser.versions.android ? 'landscape':'portrait';
+					// alert("竖屏");
+				}
+				if( window.orientation == 90 || window.orientation == -90 ) {
+					windowOrientation = browser.versions.android ? 'portrait':'landscape';
+					// alert("横屏");
+				}
+				orientationValue = window.orientation;
+			}, false);
+		}
+    </script>
+</body>
+</html>
