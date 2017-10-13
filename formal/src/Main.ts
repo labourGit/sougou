@@ -116,6 +116,7 @@ class Main extends egret.DisplayObjectContainer {
         this.removeChild(this.game);
         this.game= new Game();
         this.addChild(this.game);
+        Util.colors=[0xE76875,0xFF8700,0xddc733];
     }
 
     private loadps(): void {
@@ -130,6 +131,6 @@ class Main extends egret.DisplayObjectContainer {
         }
     }
     public get _game():Game{
-        return this.game
+        return this.game;
     }
 }

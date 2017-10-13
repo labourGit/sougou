@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LoadingUIexml" width="640" height="1050" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+<e:Image id="img" source="loading_0_png" width="640" height="1050" right="0" y="0" scale9Grid="29,24,175,147"/>
+</e:Skin>

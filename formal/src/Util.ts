@@ -3,58 +3,189 @@ class Util{
     public static id_shop:number;
     public static cardTime:number;
     public static choiceScore:number;
+    public static colornum=[0,1,2]
+    public static colors=[0xE76875,0xFF8700,0xddc733];
+    public static sucess:boolean;
     public static op1=[
-        {id:1,str:"美容院"},
-        {id:1,str:"美容中心"},
-        {id:2,str:"水光针"},
-        {id:2,str:"玻尿酸"},
-        {id:3,str:"如何变美"},
-        {id:3,str:"长相不满意"}
+        {id:1,str:"美容院",cx:"通用词"},
+        {id:1,str:"美容中心",cx:"通用词"},
+        {id:2,str:"水光针",cx:"产品词"},
+        {id:2,str:"玻尿酸",cx:"产品词"},
+        {id:3,str:"如何变美",cx:"人群词"},
+        {id:3,str:"长相不满意",cx:"人群词"}
     ]
      public static op2=[
-        {id:1,str:"美式咖啡"},
-        {id:1,str:"拿铁咖啡"},
-        {id:2,str:"咖啡店"},
-        {id:2,str:"咖啡厅"},
-        {id:3,str:"慢咖啡厅"},
-        {id:3,str:"猫屎咖啡厅"}
+        {id:1,str:"美式咖啡",cx:"产品词"},
+        {id:1,str:"拿铁咖啡",cx:"产品词"},
+        {id:2,str:"咖啡店",cx:"通用词"},
+        {id:2,str:"咖啡厅",cx:"通用词"},
+        {id:3,str:"慢咖啡厅",cx:"竞品词"},
+        {id:3,str:"猫屎咖啡厅",cx:"竞品词"}
     ]
      public static op3=[
-        {id:1,str:"游泳池"},
-        {id:1,str:"健身房"},
-        {id:2,str:"肚皮舞"},
-        {id:2,str:"动感单车"},
-        {id:3,str:"有氧运动"},
-        {id:3,str:"无氧运动"}
+        {id:1,str:"游泳池",cx:"通用词"},
+        {id:1,str:"健身房",cx:"通用词"},
+        {id:2,str:"肚皮舞",cx:"产品词"},
+        {id:2,str:"动感单车",cx:"产品词"},
+        {id:3,str:"最强肌霸",cx:"品牌词"},
+        {id:3,str:"肌霸健身",cx:"品牌词"}
     ]
     public static xp1=[
-        {score:0,str:"哪个是他她它喜欢的“美美 美容院”店标？"},
-        {score:3,str:"<美美 美容院>塑造自然美的你"},
-        {score:1,str:"美美 美容院"},
-        {score:2,str:"整形美容，祝美梦成真"},
-        {score:0,str:"哪一个选项能一言道尽“美美 美容院”最强卖点？"},
-        {score:3,str:"美美 美容院 20年品牌铸锭，国际一流水准，博士后科研团队，认真对待每一位求美者。"},
-        {score:2,str:"爱美人士首选专业隆鼻,隆胸,抽脂,改脸型等美容整形医院，效果宛若天成! "},
-        {score:1,str:"网红最爱美容机构，助您从此走上人生巅峰！"},
+        {score:0,str:"哪一个是买家最想看到的店招？"},
+        {score:3,str:"<美美 美容院>塑造自然美的你" ,texte:<Array<egret.ITextElement>>[    
+                {text:"<"},
+                {text:"美美 美容院",style:{"textColor":0xff160b}},
+                {text:">"},
+                {text:"塑造自然美的你"},
+        ]},
+        {score:1,str:"你的美容顾问，祝你开启美丽人生",texte:<Array<egret.ITextElement>>[    
+                {text:"你的"},
+                {text:"美容",style:{"textColor":0xff160b}},
+                {text:"顾问，祝你开启"},
+                {text:"美",style:{"textColor":0xff160b}},
+                {text:"丽人生"}
+        ]},
+        {score:2,str:"整形美容，祝美梦成功",texte:<Array<egret.ITextElement>>[    
+                {text:"整形"},
+                {text:"美容",style:{"textColor":0xff160b}},
+                {text:"祝"},
+                {text:"美",style:{"textColor":0xff160b}},
+                {text:"梦成功"}
+        ]},
+        {score:0,str:"哪一个是买家最想了解的产品卖点？"},
+        {score:30,str:"美美 美容院 20年品牌铸锭，国际一流水准，明星、大腕儿美容首选，值得信赖！",texte:<Array<egret.ITextElement>>[    
+                {text:"美美 美容院",style:{"textColor":0xff160b}},
+                {text:" 20年品牌铸锭，国际一流水准，明星、大腕儿"},
+                {text:"美容",style:{"textColor":0xff160b}},
+                {text:"首选，值得信赖！"}
+                
+        ],texte2:<Array<egret.ITextElement>>[    
+                {text:"美美 美容院",style:{"textColor":0xff160b}},
+                {text:" 20年品牌铸锭，国际一流水准，明星、大腕儿"},
+                {text:"美容",style:{"textColor":0xff160b}},
+                {text:"首选，值得信赖！\n"},
+                {text:"查看菜单 | 热卖商品 | 门店查看 | 立即预定",style:{"size":20,"textColor":0x5d9fe9}}
+                
+        ]},
+        {score:20,str:"爱美人士首选专业隆鼻，隆胸，抽脂，改脸型等美容整形医院，效果宛若天成! ",texte:<Array<egret.ITextElement>>[ 
+                {text:"爱"},   
+                {text:"美",style:{"textColor":0xff160b}},
+                {text:"人士首选专业隆鼻，隆胸，抽脂，改脸型等"},
+                {text:"美容",style:{"textColor":0xff160b}},
+                {text:"整形医院，效果宛若天成!"}]
+            ,texte2:<Array<egret.ITextElement>>[ 
+                {text:"爱"},   
+                {text:"美",style:{"textColor":0xff160b}},
+                {text:"人士首选专业隆鼻，隆胸，抽脂，改脸型等"},
+                {text:"美容",style:{"textColor":0xff160b}},
+                {text:"整形医院，效果宛若天成!\n"},
+                {text:"查看菜单 | 热卖商品 | 门店查看 | 立即预定",style:{"size":20,"textColor":0x5d9fe9}}]},
+        {score:10,str:"网红最爱美容机构，助您从此走上人生巅峰！",texte:<Array<egret.ITextElement>>[  
+                {text:"网红最爱"},  
+                {text:"美容",style:{"textColor":0xff160b}},
+                {text:"机构，助您从此走上人生巅峰！"}          
+        ]},
     ]
     public static xp2=[
-        {score:0,str:"哪个是他她它喜欢的“香榭丽舍的黄昏咖啡店”店标？"},
-        {score:3,str:"<香榭丽舍的黄昏咖啡>浪漫的味道"},
-        {score:1,str:"远离疾病，从一天三杯咖啡开始"},
-        {score:2,str:"极致精选猫屎咖啡，只给有品位的你"},
-        {score:0,str:"哪一个选项能一言道尽“香榭丽舍的黄昏咖啡店”最强卖点？"},
-        {score:3,str:"香榭丽舍的黄昏咖啡店，精选巴西优质咖啡豆，手工现磨，慢煮回味，搭配多款精致糕点，畅饮一杯元气满满，支持外卖，5km内20分钟免费送达！"},
-        {score:1,str:"咖啡的烟碱酸含有维他命B，烘焙后的咖啡豆含量更高，一日三杯咖啡可预防胆结石，香榭丽舍的黄昏咖啡店，您的家庭医生。"},
-        {score:2,str:"全球精选80余种咖啡豆，历经八十八道顶级工序，慢工细火精致熬煮，认真最好每一杯咖啡，只为让你满意！"},
+        {score:0,str:"哪一个是买家最想看到的店招？"},
+        {score:3,str:"<香榭丽舍的黄昏咖啡>浪漫的味道",texte:<Array<egret.ITextElement>>[    
+                {text:"<"},
+                {text:"香榭丽舍的黄昏咖啡",style:{"textColor":0xff160b}},
+                {text:">"},
+                {text:"浪漫的味道"},
+        ]},
+        {score:1,str:"远离疾病，从一天三杯咖啡开始",texte:<Array<egret.ITextElement>>[  
+                {text:"远离疾病，从一天三杯"},  
+                {text:"咖啡",style:{"textColor":0xff160b}},
+                {text:"开始"}          
+        ]},
+        {score:2,str:"极致精选猫屎咖啡，只给有品位的你",texte:<Array<egret.ITextElement>>[  
+                {text:"极致精选猫屎"},  
+                {text:"咖啡",style:{"textColor":0xff160b}},
+                {text:"，只给有品位的你"}          
+        ]},
+        {score:0,str:"哪一个是买家最想了解的产品卖点？"},
+        {score:30,str:"香榭丽舍的黄昏咖啡店，巴菲特最爱咖啡五折热卖，一杯咖啡拉近你与股神的距离，5km内20分钟免费送达！",texte2:<Array<egret.ITextElement>>[    
+                {text:"香榭丽舍的黄昏咖啡店",style:{"textColor":0xff160b}},
+                {text:"，巴菲特最爱咖啡五折热卖，一杯"},
+                {text:"咖啡",style:{"textColor":0xff160b}},
+                {text:"拉近你与股神的距离，5km内20分钟免费送达！\n"},
+                 {text:"查看菜单 | 热卖商品 | 门店查看 | 立即预定",style:{"size":20,"textColor":0x5d9fe9}}
+                
+        ],texte:<Array<egret.ITextElement>>[    
+                {text:"香榭丽舍的黄昏咖啡店",style:{"textColor":0xff160b}},
+                {text:"，巴菲特最爱咖啡五折热卖，一杯"},
+                {text:"咖啡",style:{"textColor":0xff160b}},
+                {text:"拉近你与股神的距离，5km内20分钟免费送达！"}
+                
+        ]
+    },
+        {score:10,str:"咖啡的烟碱酸含有维他命B，烘焙后的咖啡豆含量更高，一日三杯咖啡可预防胆结石，香榭丽舍的黄昏咖啡店，您的家庭医生。",texte:<Array<egret.ITextElement>>[    
+                {text:"咖啡",style:{"textColor":0xff160b}},
+                {text:"的烟碱酸含有维他命B，烘焙后的"},
+                {text:"咖啡",style:{"textColor":0xff160b}},
+                {text:"豆含量更高，一日三杯"},
+                {text:"咖啡",style:{"textColor":0xff160b}},
+                {text:"可预防胆结石，"},
+                {text:"香榭丽舍的黄昏咖啡店",style:{"textColor":0xff160b}},
+                {text:"，您的家庭医生。"}
+                
+        ]},
+        {score:20,str:"香榭丽舍的黄昏咖啡店,精选巴西优质咖啡豆，手工现磨，慢煮回味，搭配多种精致糕点，畅饮一杯元气满满！",texte:<Array<egret.ITextElement>>[    
+                {text:"香榭丽舍的黄昏咖啡店",style:{"textColor":0xff160b}},
+                {text:",精选巴西优质"},
+                {text:"咖啡",style:{"textColor":0xff160b}},
+                {text:"豆，手工现磨，慢煮回味，搭配多种精致糕点，畅饮一杯元气满满！"},
+                
+        ],texte2:<Array<egret.ITextElement>>[    
+                {text:"香榭丽舍的黄昏咖啡店",style:{"textColor":0xff160b}},
+                {text:",精选巴西优质"},
+                {text:"咖啡",style:{"textColor":0xff160b}},
+                {text:"豆，手工现磨，慢煮回味，搭配多种精致糕点，畅饮一杯元气满满！\n"},
+                {text:"查看菜单 | 热卖商品 | 门店查看 | 立即预定",style:{"size":20,"textColor":0x5d9fe9}}
+                
+        ]
+    },
     ]
       public static xp3=[
-        {score:0,str:"哪个是他她它喜欢的“最强肌霸健身房”店标？ "},
-        {score:3,str:"<最强肌霸健身房>高颜值一对一健身教练"},
-        {score:1,str:"最强肌霸 你值得拥有"},
-        {score:2,str:"不吃药 不打针30天快速瘦身"},
-        {score:0,str:"哪一个选项能一言道尽“最强肌霸健身房”最强卖点？"},
-        {score:3,str:"最强肌霸健身房，3000平米阳光泳池，近百种操课，全套美国悍马器械，全国冠军一对一专业指导，给您绝对私人订制。"},
-        {score:2,str:"齐全的器械设备，专业的教练进行指导，良好的健身氛围，168元单人游泳+汗蒸体验套餐 仅售99元"},
-        {score:1,str:"人生的道路就像内裤没有一条不是自己选的，那么在健身的路上，你选择开始了吗？"},
+        {score:0,str:"哪一个是买家最想看到的店招？"},
+        {score:3,str:"<最强肌霸健身房>高颜值一对一健身教练",texte:<Array<egret.ITextElement>>[    
+                {text:"<"},
+                {text:"最强肌霸健身房",style:{"textColor":0xff160b}},
+                {text:">高颜值一对一健身教练"}
+        ]},
+        {score:1,str:"最强肌霸 你值得拥有",texte:<Array<egret.ITextElement>>[    
+                {text:"最强肌霸",style:{"textColor":0xff160b}},
+                {text:" 你值得拥有"}
+        ]},
+        {score:2,str:"不吃药 不打针30天快速瘦身",texte:<Array<egret.ITextElement>>[           
+                {text:"不吃药 不打针30天快速瘦身"}
+        ]},
+        {score:0,str:"哪一个是买家最想了解的产品卖点？"},
+        {score:30,str:"最强肌霸健身房，高颜值教练专业一对一陪练，带你30天秀出好身材！",texte2:<Array<egret.ITextElement>>[    
+                {text:"最强肌霸健身房",style:{"textColor":0xff160b}},
+                {text:"，高颜值教练专业一对一陪练，带你30天秀出好身材！\n"},
+                {text:"查看菜单 | 热卖商品 | 门店查看 | 立即预定",style:{"size":20,"textColor":0x5d9fe9}}
+        ],texte:<Array<egret.ITextElement>>[    
+                {text:"最强肌霸健身房",style:{"textColor":0xff160b}},
+                {text:"，高颜值教练专业一对一陪练，带你30天秀出好身材！"},
+        ]
+    },
+        {score:20,str:"齐全的器械设备，专业的教练进行指导，良好的健身氛围，168元单人游泳+汗蒸体验套餐 仅售99元",texte2:<Array<egret.ITextElement>>[    
+                {text:"齐全的器械设备，专业的教练进行指导，良好的"},
+                {text:"健身",style:{"textColor":0xff160b}},
+                {text:"氛围，168元单人游泳+汗蒸体验套餐 仅售99元\n"},
+                {text:"查看菜单 | 热卖商品 | 门店查看 | 立即预定",style:{"size":20,"textColor":0x5d9fe9}}
+        ],texte:<Array<egret.ITextElement>>[    
+                {text:"齐全的器械设备，专业的教练进行指导，良好的"},
+                {text:"健身",style:{"textColor":0xff160b}},
+                {text:"氛围，168元单人游泳+汗蒸体验套餐 仅售99元"},     
+        ]
+    },
+        {score:10,str:"人生的道路就像内裤没有一条不是自己选的，那么在健身的路上，你选择开始了吗？",texte:<Array<egret.ITextElement>>[    
+                {text:"人生的道路就像内裤没有一条不是自己选的，那么在"},
+                {text:"健身",style:{"textColor":0xff160b}},
+                {text:"的路上，你选择开始了吗？"}
+        ]},
     ]
 }

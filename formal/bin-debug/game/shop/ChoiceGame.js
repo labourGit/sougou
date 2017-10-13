@@ -14,12 +14,17 @@ var ChoiceGame = (function (_super) {
         _this.addChild(_this.bg);
         _this.content = new egret.Bitmap(RES.getRes("content_png"));
         _this.addChild(_this.content);
+        // this.content.anchorOffsetX=320;
+        _this.content.anchorOffsetY = 300;
+        _this.content.y = 300;
+        _this.content.scaleY = 0.1;
+        egret.Tween.get(_this.content).to({ scaleY: 1 }, 400, egret.Ease.quadOut).call(_this.init, _this);
         return _this;
     }
     ChoiceGame.prototype.init = function () {
-        this.shop = new Shop();
+        this.shop = new ShopScene();
         this.addChild(this.shop);
-        this.shop.init();
+        // this.shop.init();
     };
     ChoiceGame.prototype.del_shop = function () {
         this.removeChild(this.shop);

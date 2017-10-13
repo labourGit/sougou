@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ShopSceneSkin" width="640" height="1050" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<ns1:ScrollView id="scroll1" width="640" height="400" x="0" y="199" enabled="true">		
+		<e:Group xmlns:e="http://ns.egret.com/eui" width="640" height="400" x="0" y="-22" anchorOffsetY="0" anchorOffsetX="0">
+            <e:Group xmlns:e="http://ns.egret.com/eui" width="640" height="400" y="1">
+            <e:Image  y="9" source="resource/assets/shop_beauty.png" scaleX="1.4" scaleY="1.4" horizontalCenter="-0.5"/>
+				<e:Label id="text" text="美美 美容院" y="312" fontFamily="SimHei" bold="true" textColor="0xdb6638" horizontalCenter="0" textAlign="center"/>
+            </e:Group>
+            <e:Group xmlns:e="http://ns.egret.com/eui" width="640" height="400">
+            <e:Image y="9" source="resource/assets/shop_cafe.png" scaleX="1.4" scaleY="1.4" horizontalCenter="0.5"/>
+			<e:Label id="text2" text="香榭丽舍黄昏咖啡店" y="343" fontFamily="SimHei" bold="true" textColor="0xdb6638" textAlign="center" horizontalCenter="0"/>
+            </e:Group>
+            <e:Group xmlns:e="http://ns.egret.com/eui" width="640" height="400">
+            <e:Image y="9" source="resource/assets/shop_sport.png" scaleX="1.4" scaleY="1.4" horizontalCenter="-0.5"/>
+			<e:Label id="text3" text="最强肌霸健身房" y="343" fontFamily="SimHei" bold="true" textColor="0xdb6638" textAlign="center" horizontalCenter="0.5"/>
+            </e:Group>
+			<e:layout>
+				<e:HorizontalLayout gap="0"/>
+			</e:layout>
+		</e:Group>
+	</ns1:ScrollView>	
+</e:Skin>

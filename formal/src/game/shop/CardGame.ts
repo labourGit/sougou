@@ -34,8 +34,16 @@ class CardGame extends egret.DisplayObjectContainer{
     private _lastTime:number;
     private sun_light:egret.Bitmap;
     private btn:egret.Bitmap;
+    private firstBtn:egret.Bitmap;
+    private rule_board:RuleBoard;
+    private pei_str1:string;
+    private pei_cx1:string;
+    private pei_cx2:string;
+    private pei_cx3:string;
+    private pei_str2:string;
+    private pei_str3:string;
     private createView():void{
-         this.board=new Boardshop("同类词翻翻乐",30);
+         this.board=new Boardshop("同类词翻翻乐",50);
          this.addChild(this.board);
          for(var i=0;i<6;i++){
              var card=new Card(this.wordArry[i].id,this.wordArry[i].str,i);
@@ -55,15 +63,40 @@ class CardGame extends egret.DisplayObjectContainer{
          this.hero=new Hero();
          this.addChild(this.hero);
          this.hero.init();
-         egret.setTimeout(this.start,this,3000);
+         this.rule_board=new RuleBoard();
+         this.rule_board.anchorOffsetX=this.rule_board.width/2;
+         this.rule_board.anchorOffsetY=this.rule_board.height/2;
+         this.rule_board.x=320;
+         this.rule_board.y=450;
+         this.rule_board.alpha=0;
+         this.rule_board.scaleX=0.4;
+         this.rule_board.scaleY=0.4
+         this.addChild(this.rule_board);
+         egret.Tween.get(this.rule_board).wait(700).to({alpha:1,scaleX:1,scaleY:1},350,egret.Ease.backOut);
+         this.firstBtn=new egret.Bitmap(RES.getRes("firstBtn_png"));
+         this.addChild(this.firstBtn);
+         this.firstBtn.anchorOffsetX=this.firstBtn.width/2;
+         this.firstBtn.anchorOffsetY=this.firstBtn.height/2;
+         this.firstBtn.x=320;
+         this.firstBtn.y=600;
+         this.firstBtn.alpha=0;
+         this.firstBtn.scaleX=1;
+         this.firstBtn.scaleY=1;
+         egret.Tween.get(this.firstBtn).wait(1000).to({alpha:1,scaleX:1,scaleY:1},250,egret.Ease.backOut);
+         this.firstBtn.touchEnabled=true;
+         this.firstBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.start,this)    
     }
     private start(){
+            this.removeChild(this.firstBtn);
+            this.removeChild(this.rule_board);
+            let _sound: egret.Sound = RES.getRes("goMusic_mp3");
+            _sound.play(0, 1); 
             this.tip=new egret.TextField();              
-            this.tip.size=100;
+            this.tip.size=75;
             this.tip.textColor=0x000000;
             this.tip.fontFamily="fzdhjt";
-            this.tip.width=250;   
-            this.tip.height=250;        
+            this.tip.width=500;   
+            this.tip.height=500;        
             this.tip.anchorOffsetX=this.tip.width/2;
             this.tip.anchorOffsetY=this.tip.height/2;
             this.tip.x=320;
@@ -73,9 +106,9 @@ class CardGame extends egret.DisplayObjectContainer{
             this.tip.text="Go!";
             this.tip.scaleX=1;
             this.tip.scaleY=1;
-            this.tip.alpha=1;
-            this.addChild(this.tip); 
-            var ta=egret.Tween.get(this.tip).to({alpha:0,scaleX:3,scaleY:3},1000,egret.Ease.backIn).call(this.go,this)
+            this.tip.alpha=0;
+            this.addChild(this.tip);
+            var ta=egret.Tween.get(this.tip).wait(200).to({alpha:1},1).to({alpha:0,scaleX:4,scaleY:4},1000,egret.Ease.backIn).call(this.go,this);
     }
     private go(){
         console.log("开始")
@@ -119,6 +152,42 @@ class CardGame extends egret.DisplayObjectContainer{
             this.sucess_turn++;
             let _sound: egret.Sound = RES.getRes("right_mp3");
             _sound.play(0, 1);
+            if(this.sucess_turn==1){
+                this.pei_cx1=""+this.wordArry[this.cards[this.first].id_card].cx;
+                this.pei_str1=""+this.wordArry[this.cards[this.first].id_card].str+"-"+this.wordArry[this.cards[n].id_card].str;
+                console.log(this.pei_cx1);
+                console.log(this.pei_str1);
+                this.hero.tip.textColor=0xdb6638;
+                this.hero.tip.y=Util.h-280;
+                this.hero.tip.x=60;
+                this.hero.tip.textFlow=<Array<egret.ITextElement>>[
+                {text:"答对配对词666：\n",style:{"textColor":0x000000}},
+                {text:this.pei_cx1+"：",style:{"textColor":0x000000}},
+                {text:this.pei_str1+"\n",style:{"textColor":0xdb6638}}          
+              ];
+            }else if(this.sucess_turn==2){
+                this.pei_cx2=""+this.wordArry[this.cards[this.first].id_card].cx;
+                this.pei_str2=""+this.wordArry[this.cards[this.first].id_card].str+"-"+this.wordArry[this.cards[n].id_card].str
+                this.hero.tip.textFlow=<Array<egret.ITextElement>>[
+                {text:"答对配对词666：\n",style:{"textColor":0x000000}},
+                {text:this.pei_cx1+"：",style:{"textColor":0x000000}},
+                {text:this.pei_str1+"\n",style:{"textColor":0xdb6638}},
+                {text:this.pei_cx2+"：",style:{"textColor":0x000000}},
+                {text:this.pei_str2+"\n",style:{"textColor":0xdb6638}}
+                ]
+            }else{
+                this.pei_cx3=""+this.wordArry[this.cards[this.first].id_card].cx;
+                this.pei_str3=""+this.wordArry[this.cards[this.first].id_card].str+"-"+this.wordArry[this.cards[n].id_card].str
+                this.hero.tip.textFlow=<Array<egret.ITextElement>>[
+                {text:"答对配对词666：\n",style:{"textColor":0x000000}},
+                {text:this.pei_cx1+"：",style:{"textColor":0x000000}},
+                {text:this.pei_str1+"\n",style:{"textColor":0xdb6638}},
+                {text:this.pei_cx2+"：",style:{"textColor":0x000000}},
+                {text:this.pei_str2+"\n",style:{"textColor":0xdb6638}},
+                {text:this.pei_cx3+"：",style:{"textColor":0x000000}},
+                {text:this.pei_str3+"\n",style:{"textColor":0xdb6638}}
+                ]
+            }
             if(this.sucess_turn==3){
                 console.log("完成") ;
                 this.removeEventListener(egret.Event.ENTER_FRAME,this.gameViewUpdate,this); 
@@ -127,8 +196,9 @@ class CardGame extends egret.DisplayObjectContainer{
             
             // egret.setTimeout(this.cards[this.first].sucess_light,this,200);
             // egret.setTimeout(this.cards[n].sucess_light,this,200);
-            this.cards[n].sucess_light();
-            this.cards[this.first].sucess_light();
+            var _color=Util.colors.shift()
+            this.cards[n].sucess_light(_color);
+            this.cards[this.first].sucess_light(_color);
             this.first=-1;
             this.is_lock=0; 
         }else{
@@ -149,7 +219,8 @@ class CardGame extends egret.DisplayObjectContainer{
         this.sun_light=new egret.Bitmap(RES.getRes("sun_light_png"));
         this.addChild(this.sun_light);
         this.addChild(this.board);
-        this.board.tip.text="比赛结果";
+        this.board.tip.size=50;
+        this.board.tip.text="比赛结果";       
         this.sun_light.anchorOffsetX=325;
         this.sun_light.anchorOffsetY=342;
         this.sun_light.scaleX=1.5;
@@ -177,10 +248,10 @@ class CardGame extends egret.DisplayObjectContainer{
         this.tip_result.textAlign=egret.HorizontalAlign.CENTER;
         this.tip_result.verticalAlign=egret.VerticalAlign.MIDDLE;
         this.tip_result.textFlow = <Array<egret.ITextElement>>[
-                {text:"你在同类词翻翻乐环节共用了\n",style:{"size":35}},
-                {text:Util.cardTime+" 秒\n",style:{"size":50,"textColor":0xdb6638}},
-                {text:"与第一名仅有一步之遥，继续下一关\n",style:{"size":35}},
-                {text:"还有翻牌的机会，加油看好你",style:{"size":35}}
+                
+                {text:Util.cardTime+" 秒\n",style:{"size":80,"textColor":0xdb6638}},
+                {text:"与第一名仅有一步之遥\n",style:{"size":35}},
+                {text:"继续下一关，还有翻盘的机会!",style:{"size":35}}
              ]
         this.tip_result.scaleX=0.2;
         this.tip_result.scaleY=0.2;
@@ -189,16 +260,64 @@ class CardGame extends egret.DisplayObjectContainer{
         var ta=egret.Tween.get(this.tip_result).to({alpha:1,scaleX:1,scaleY:1},600,egret.Ease.backOut).call(this.nextGame,this);
     }
     private nextGame(){
-        this.hero.tip.text="";
-        TyperText.getInstance().typerEffect(this.hero.tip,"觉得选词眼花，分组缭乱？其实，SO esay，只需保证每个单元关键词的词义相近，词性相同，主题唯一,你将成为他她它们眼中的超级明星",50);
+        
+        this.hero.tip.textColor=0x000000;
+        this.hero.tip.y=Util.h-300;
+        this.hero.tip.x=70;
+        this.hero.tip.textFlow = <Array<egret.ITextElement>>[    
+                {text:"分组小贴士：\n",style:{"size":28}},
+                {text:"       词义相近\n",style:{"size":28,"textColor":0xdb6638}},
+                {text:"       词性相同\n",style:{"size":28,"textColor":0xdb6638}},
+                {text:"       主题唯一\n",style:{"size":28,"textColor":0xdb6638}},
+                {text:"牢记关键词分组三个原则，你将成为买家眼中的超级明星！",style:{"size":28}},
+                
+             ]
+        // TyperText.getInstance().typerEffect(this.hero.tip,"觉得选词眼花，分组缭乱？其实，SO esay，只需保证每个单元关键词的词义相近，词性相同，主题唯一,你将成为他她它们眼中的超级明星",15);
         this.btn=new egret.Bitmap(RES.getRes("nextBtn_png"));
         this.addChild(this.btn);
         this.btn.anchorOffsetX=this.btn.width/2;
+        this.btn.anchorOffsetY=this.btn.height/2;
         this.btn.x=320;
         this.btn.y=550;
+        this.btn.alpha=0;
+        this.btn.scaleX=0.1;
+        this.btn.scaleY=0.1;
+        egret.Tween.get(this.btn).to({alpha:1,scaleX:1,scaleY:1},450,egret.Ease.backOut);
         this.btn.touchEnabled=true;
         this.btn.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+            let _sound: egret.Sound = RES.getRes("qie_mp3");
+            _sound.play(0, 1);
             (<ChoiceGame>this.parent).del_cardGame();
         },this);
+    }
+}
+class RuleBoard extends egret.Sprite{
+    private rule_board:egret.Bitmap;
+    private tip:egret.TextField;
+    public constructor(){
+        super();
+        this.rule_board=new egret.Bitmap(RES.getRes("rule_board_png"));
+        this.addChild(this.rule_board);
+        this.rule_board.width=550;
+        this.rule_board.height=550*0.77;      
+        this.tip=new egret.TextField();       
+        this.tip.x=this.rule_board.x+25;
+        this.tip.y=this.rule_board.y+50;
+        this.tip.size=30;
+        this.tip.textColor=0x000000
+        this.tip.fontFamily="fzdhjt";
+            this.tip.width=500;
+            this.tip.textAlign=egret.HorizontalAlign.CENTER;
+             this.tip.textFlow = <Array<egret.ITextElement>>[              
+                {text:"第一关 游戏规则\n",style:{"bold":true}},
+                {text:"\n"},
+                {text:"将同类词两两配对\n"},
+                 {text:"如："},
+                 {text:"苹果-香蕉\n",style:{"textColor":0xdb6638}},
+                 {text:"配对成功即可形成推广词组，\n"},
+                 {text:"招徕顾客！\n"},
+                 {text:"用时越短，获胜几率越高！\n"},
+             ]   
+            this.addChild(this.tip);  
     }
 }

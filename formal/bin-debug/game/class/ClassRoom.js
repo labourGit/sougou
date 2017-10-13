@@ -22,8 +22,9 @@ var ClassRoom = (function (_super) {
         var ani = egret.Tween.get(_this.classbg).wait(100).to({ alpha: 1, scaleX: 1, scaleY: 1 }, 500, egret.Ease.quadIn).wait(400).call(_this.teacherAni, _this);
         return _this;
     }
-    ClassRoom.prototype.shakeBg = function () {
-        ShakeTool.getInstance().shakeObj(this.classbg, 0.5, 10, 5);
+    ClassRoom.prototype.roleShow = function () {
+        this.rolesani = new RolesAni();
+        this.addChild(this.rolesani);
     };
     ClassRoom.prototype.rolesShow = function () {
         this.bg = new egret.Bitmap(RES.getRes("loading_bg_jpg"));
@@ -34,35 +35,56 @@ var ClassRoom = (function (_super) {
         this.maskBg.graphics.endFill;
         this.maskBg.anchorOffsetY = 260;
         this.maskBg.scaleY = 0;
-        this.maskBg.y = 600;
+        this.maskBg.y = 480;
         this.bg.mask = this.maskBg;
         this.addChild(this.maskBg);
         this.line = new egret.Bitmap(RES.getRes("line_png"));
         this.line.anchorOffsetY = 267;
         this.line.scaleY = 0;
-        this.line.y = 600;
+        this.line.y = 480;
         this.addChild(this.line);
-        var tb = egret.Tween.get(this.line).to({ scaleY: 1 }, 400);
-        var ta = egret.Tween.get(this.maskBg).to({ scaleY: 1 }, 400).call(this.rolesAni, this);
+        var tb = egret.Tween.get(this.line).to({ scaleY: 0.75 }, 400, egret.Ease.sineOut);
+        var ta = egret.Tween.get(this.maskBg).to({ scaleY: 0.75 }, 400, egret.Ease.sineOut).call(this.rolesAni, this);
     };
     ClassRoom.prototype.teacherAni = function () {
-        this.teacher = new TeacherTwo();
-        this.addChild(this.teacher);
-        this.teacher.init();
+        egret.setTimeout(this.roleShow, this, 400);
+        //    this.teacher=new TeacherOne();
+        //    this.addChild(this.teacher);
+        //    this.teacher.init();
     };
     ClassRoom.prototype.delAni = function () {
         this.removeChild(this.teacher);
     };
     ClassRoom.prototype.rolesAni = function () {
-        this.roles = new Roles();
-        this.addChild(this.roles);
+        this.teacher2 = new TeacherTwo();
+        this.addChild(this.teacher2);
         this.maskRoles = new egret.Shape();
         this.maskRoles.graphics.beginFill(0x000000);
-        this.maskRoles.graphics.drawRect(0, 0, 640, 850);
+        this.maskRoles.graphics.drawRect(0, 0, 640, 665);
         this.maskRoles.graphics.endFill;
         this.addChild(this.maskRoles);
-        this.roles.mask = this.maskRoles;
-        this.roles.init();
+        this.teacher2.mask = this.maskRoles;
+        this.teacher2.init();
+    };
+    ClassRoom.prototype.changeBtnAni = function () {
+        var _this = this;
+        this.btn = new egret.Bitmap(RES.getRes("changeBtn_png"));
+        this.addChild(this.btn);
+        this.btn.anchorOffsetX = this.btn.width / 2;
+        this.btn.anchorOffsetY = this.btn.height / 2;
+        this.btn.x = 320;
+        this.btn.y = 870;
+        this.btn.touchEnabled = true;
+        this.btn.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            var _sound = RES.getRes("qie_mp3");
+            _sound.play(0, 1);
+            _this.teacher2.bai();
+        }, this);
+    };
+    ClassRoom.prototype.maskAni = function () {
+        var tc = egret.Tween.get(this.teacher2).to({ x: -400 }, 200, egret.Ease.sineOut);
+        var tb = egret.Tween.get(this.line).to({ scaleY: 2.5 }, 700, egret.Ease.sineOut);
+        var ta = egret.Tween.get(this.maskBg).to({ scaleY: 2.5 }, 700, egret.Ease.sineOut).call(this.del, this);
     };
     ClassRoom.prototype.del = function () {
         this.parent.shopScene();

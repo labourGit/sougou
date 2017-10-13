@@ -1,7 +1,7 @@
 class ChoiceGame extends egret.DisplayObjectContainer{
     private bg:egret.Bitmap;
     private content:egret.Bitmap;
-    private shop:Shop;
+    private shop:ShopScene;
     private cardGame:CardGame;
     private xuanGame:XuanGame;
     private lastPage:LastPage;
@@ -11,12 +11,17 @@ class ChoiceGame extends egret.DisplayObjectContainer{
         this.addChild(this.bg);
         this.content=new egret.Bitmap(RES.getRes("content_png"));
         this.addChild(this.content);
+        // this.content.anchorOffsetX=320;
+        this.content.anchorOffsetY=300;
+        this.content.y=300;
+        this.content.scaleY=0.1;
+        egret.Tween.get(this.content).to({scaleY:1},400,egret.Ease.quadOut).call(this.init,this);
         
     }
     public init(){
-        this.shop=new Shop();
+        this.shop=new ShopScene();
         this.addChild(this.shop);
-        this.shop.init();
+        // this.shop.init();
     }
     public del_shop():void{
         this.removeChild(this.shop);

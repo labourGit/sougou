@@ -39,7 +39,7 @@ var TeacherThree = (function (_super) {
         this.tip.text = "";
         this.addChild(this.tip);
         this.addChild(this.teacher);
-        TyperText.getInstance().typerEffect(this.tip, this._string, 80);
+        TyperText.getInstance().typerEffect(this.tip, this._string, 30);
         // egret.setTimeout(this.bai,this,4000);
     };
     TeacherThree.prototype.bai = function () {

@@ -43,7 +43,7 @@ class Shop extends egret.DisplayObjectContainer{
     public init(){
         
         this.shop_beauty.filters=[];
-        this.board=new Boardshop("请选择下面一家商铺",40);
+        this.board=new Boardshop("请选择你要经营的店铺",20);
         this.addChild(this.board);
         //
         this.isFirst=true;
@@ -61,7 +61,7 @@ class Shop extends egret.DisplayObjectContainer{
          _sound.play(0, 1);
         this.board.tip.text="美容院";
         if(this.isFirst){
-            this.teacher1=new TeacherThree("星星之火即将燎原！你的店铺成交情况将决定你是否挑战成功，赶紧开脑洞招揽生意啦！燥起来！");
+            this.teacher1=new TeacherThree("请从三家店铺中选择一家，点击确认，就可以开始游戏啦");
             this.addChild(this.teacher1);
             this.teacher1.init();
             this.shop_beauty.filters=[this.glowFilter];

@@ -31,7 +31,6 @@ var Game = (function (_super) {
     Game.prototype.shopScene = function () {
         this.choiceGame = new ChoiceGame();
         this.addChild(this.choiceGame);
-        this.choiceGame.init();
     };
     Game.prototype.restart = function () {
         this.parent.restart();

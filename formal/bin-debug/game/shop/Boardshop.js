@@ -12,6 +12,9 @@ var Boardshop = (function (_super) {
     function Boardshop(string, _size) {
         var _this = _super.call(this) || this;
         _this.str = string;
+        _this._num = _size;
+        _this.tip = new egret.TextField();
+        _this.tip.text = _this.str;
         _this.board = new egret.Bitmap(RES.getRes("board1_png"));
         _this.board.anchorOffsetX = _this.board.width / 2;
         _this.board.anchorOffsetY = _this.board.height / 2;
@@ -26,10 +29,9 @@ var Boardshop = (function (_super) {
         //       
     }
     Boardshop.prototype.show = function () {
-        this.tip = new egret.TextField();
         this.tip.x = 320;
         this.tip.y = 100;
-        this.tip.size = 30;
+        this.tip.size = this._num;
         this.tip.textColor = 0x000000;
         this.tip.fontFamily = "fzdhjt";
         this.tip.width = this.board.width - 100;
@@ -38,7 +40,6 @@ var Boardshop = (function (_super) {
         this.tip.anchorOffsetY = this.tip.height / 2;
         this.tip.textAlign = egret.HorizontalAlign.CENTER;
         this.tip.verticalAlign = egret.VerticalAlign.MIDDLE;
-        this.tip.text = this.str;
         this.addChild(this.tip);
         // TyperText.getInstance().typerEffect(this.tip,"",100);
     };

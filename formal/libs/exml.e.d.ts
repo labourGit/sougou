@@ -1,5 +1,7 @@
 declare class LoadingUIexml extends eui.Skin{
 }
+declare class ShopSceneSkin extends eui.Skin{
+}
 declare module skins{
 	class ButtonSkin extends eui.Skin{
 	}

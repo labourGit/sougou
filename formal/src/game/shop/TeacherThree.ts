@@ -36,7 +36,7 @@ class TeacherThree extends egret.Sprite{
             this.tip.text="";     
             this.addChild(this.tip);  
             this.addChild(this.teacher);
-            TyperText.getInstance().typerEffect(this.tip,this._string,80);
+            TyperText.getInstance().typerEffect(this.tip,this._string,30);
             // egret.setTimeout(this.bai,this,4000);
       
     }
@@ -44,7 +44,7 @@ class TeacherThree extends egret.Sprite{
         this.removeChild(this.tip);
         this.removeChild(this.dialog);
         var ta=egret.Tween.get(this.teacher).to({x:-400},400,egret.Ease.sineInOut).call(()=>{
-            (<Shop>this.parent).del();
+            (<ShopScene>this.parent).del();
         });
     }
 }

@@ -1,0 +1,853 @@
+{
+	"groups": [
+		{
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,cardbg_jpg,loading_0_png,bar2_png,barBg2_png,beauty_alpha2_png,board3_png,board12_png,board22_png,button12_png,cafe_alpha2_png,cardbg2_jpg,card_back2_png,card_face2_png,choiceA2_png,choiceB2_png,choiceC2_png,classBg2_jpg,cloud2_png,content2_png,dialog12_png,dialog1_hero2_png,dialog_role2_png,dialog_roleLeft2_png,dialog_roleRight2_png,dog2_png,garden2_png,glass2_png,happyBtn2_png,last_rebtn2_png,line2_png,loading_02_png,loading_12_png,loading_22_png,loading_bg2_jpg,mijibtn2_png,nextBtn2_png,qie2_mp3,right2_mp3,ring2_png,rolepng,roleLeft2_png,roleRight2_png,role_fail2_png,schoolBg2_jpg,sg_hero2_png,shop_beauty2_png,shop_cafe2_png,shop_sport2_png,shop_teacher12_png,sport_alpha2_png,ss2_png,sun_light2_png,teacher1_hand7_png,teacher1_hand02_png,teacher1_hand12_png,teacher1_hand22_png,teacher1_hand32_png,teacher1_hand42_png,teacher1_hand52_png,teacher1_hand62_png,teacher_12_png,tieshi2_png,unhappyBtn2_png,wrong2_mp3,bg_mp3",
+			"name": "preload"
+		},
+		{
+			"keys": "loading_bg_jpg,loading_2_png,loading_1_png,barBg_png,bar_png,loading_0_png,LoadingUI_exml",
+			"name": "loading"
+		},
+		{
+			"keys": "cloud_png,school_png,schoolBg_jpg,board_png,teacher_1_png,teacher1_hand_png,dialog1_png,ring_png,teacher1_hand0_png,teacher1_hand1_png,teacher1_hand2_png,teacher1_hand3_png,teacher1_hand6_png,teacher1_hand4_png,teacher1_hand5_png,wrong_mp3,right_mp3,qie_mp3,goMusic_mp3",
+			"name": "p1"
+		},
+		{
+			"keys": "dialog_roleRight_png,dialog_role_png,line_png,roleRight_png,roleLeft_png,role_png,dialog_roleLeft_png,classBg_jpg,role1_png,role3_png,role2_png",
+			"name": "p2"
+		},
+		{
+			"keys": "shop_teacher1_png,board1_png,board2_png,button1_png,garden_png,shop_beauty_png,shop_cafe_png,shop_sport_png,content_png,arrow_left_png,arrow_right_png,logo_sucess_png,logo_fail_png",
+			"name": "p3"
+		},
+		{
+			"keys": "card_back_png,card_face_png,sg_hero_png,dialog1_hero_png,sun_light_png,nextBtn_png",
+			"name": "p4"
+		},
+		{
+			"keys": "unhappyBtn_png,beauty_alpha_png,choiceA_png,cafe_alpha_png,choiceB_png,choiceC_png,happyBtn_png,sport_alpha_png,ss_png",
+			"name": "p5"
+		},
+		{
+			"keys": "role_fail_png,tieshi_png,dog_png,glass_png,last_rebtn_png,mijibtn_png,dialog_last_png,logo_role_png",
+			"name": "p6"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/cardbg.jpg",
+			"type": "image",
+			"name": "cardbg_jpg"
+		},
+		{
+			"url": "assets/loading_bg.jpg",
+			"type": "image",
+			"name": "loading_bg_jpg"
+		},
+		{
+			"url": "assets/loading_2.png",
+			"type": "image",
+			"name": "loading_2_png"
+		},
+		{
+			"url": "assets/loading_1.png",
+			"type": "image",
+			"name": "loading_1_png"
+		},
+		{
+			"url": "assets/bar.png",
+			"type": "image",
+			"name": "bar_png"
+		},
+		{
+			"url": "assets/barBg.png",
+			"type": "image",
+			"name": "barBg_png"
+		},
+		{
+			"url": "assets/loading_0.png",
+			"type": "image",
+			"name": "loading_0_png"
+		},
+		{
+			"url": "assets/LoadingUI.exml",
+			"type": "bin",
+			"name": "LoadingUI_exml"
+		},
+		{
+			"url": "assets/cloud.png",
+			"type": "image",
+			"name": "cloud_png"
+		},
+		{
+			"url": "assets/school.png",
+			"type": "image",
+			"name": "school_png"
+		},
+		{
+			"url": "assets/schoolBg.jpg",
+			"type": "image",
+			"name": "schoolBg_jpg"
+		},
+		{
+			"url": "assets/board.png",
+			"type": "image",
+			"name": "board_png"
+		},
+		{
+			"url": "assets/teacher_1.png",
+			"type": "image",
+			"name": "teacher_1_png"
+		},
+		{
+			"url": "assets/teacher1_hand.png",
+			"type": "image",
+			"name": "teacher1_hand_png"
+		},
+		{
+			"url": "assets/dialog1.png",
+			"type": "image",
+			"name": "dialog1_png"
+		},
+		{
+			"url": "assets/ring.png",
+			"type": "image",
+			"name": "ring_png"
+		},
+		{
+			"url": "assets/teacher1_hand0.png",
+			"type": "image",
+			"name": "teacher1_hand0_png"
+		},
+		{
+			"url": "assets/teacher1_hand1.png",
+			"type": "image",
+			"name": "teacher1_hand1_png"
+		},
+		{
+			"url": "assets/teacher1_hand2.png",
+			"type": "image",
+			"name": "teacher1_hand2_png"
+		},
+		{
+			"url": "assets/teacher1_hand3.png",
+			"type": "image",
+			"name": "teacher1_hand3_png"
+		},
+		{
+			"url": "assets/teacher1_hand6.png",
+			"type": "image",
+			"name": "teacher1_hand6_png"
+		},
+		{
+			"url": "assets/teacher1_hand4.png",
+			"type": "image",
+			"name": "teacher1_hand4_png"
+		},
+		{
+			"url": "assets/teacher1_hand5.png",
+			"type": "image",
+			"name": "teacher1_hand5_png"
+		},
+		{
+			"url": "assets/dialog_roleRight.png",
+			"type": "image",
+			"name": "dialog_roleRight_png"
+		},
+		{
+			"url": "assets/dialog_role.png",
+			"type": "image",
+			"name": "dialog_role_png"
+		},
+		{
+			"url": "assets/line.png",
+			"type": "image",
+			"name": "line_png"
+		},
+		{
+			"url": "assets/roleRight.png",
+			"type": "image",
+			"name": "roleRight_png"
+		},
+		{
+			"url": "assets/roleLeft.png",
+			"type": "image",
+			"name": "roleLeft_png"
+		},
+		{
+			"url": "assets/role.png",
+			"type": "image",
+			"name": "role_png"
+		},
+		{
+			"url": "assets/dialog_roleLeft.png",
+			"type": "image",
+			"name": "dialog_roleLeft_png"
+		},
+		{
+			"url": "assets/classBg.jpg",
+			"type": "image",
+			"name": "classBg_jpg"
+		},
+		{
+			"url": "assets/shop_teacher1.png",
+			"type": "image",
+			"name": "shop_teacher1_png"
+		},
+		{
+			"url": "assets/board1.png",
+			"type": "image",
+			"name": "board1_png"
+		},
+		{
+			"url": "assets/board2.png",
+			"type": "image",
+			"name": "board2_png"
+		},
+		{
+			"url": "assets/button1.png",
+			"type": "image",
+			"name": "button1_png"
+		},
+		{
+			"url": "assets/garden.png",
+			"type": "image",
+			"name": "garden_png"
+		},
+		{
+			"url": "assets/shop_beauty.png",
+			"type": "image",
+			"name": "shop_beauty_png"
+		},
+		{
+			"url": "assets/shop_cafe.png",
+			"type": "image",
+			"name": "shop_cafe_png"
+		},
+		{
+			"url": "assets/shop_sport.png",
+			"type": "image",
+			"name": "shop_sport_png"
+		},
+		{
+			"url": "assets/content.png",
+			"type": "image",
+			"name": "content_png"
+		},
+		{
+			"url": "assets/card_back.png",
+			"type": "image",
+			"name": "card_back_png"
+		},
+		{
+			"url": "assets/card_face.png",
+			"type": "image",
+			"name": "card_face_png"
+		},
+		{
+			"url": "assets/sg_hero.png",
+			"type": "image",
+			"name": "sg_hero_png"
+		},
+		{
+			"url": "assets/dialog1_hero.png",
+			"type": "image",
+			"name": "dialog1_hero_png"
+		},
+		{
+			"url": "assets/sun_light.png",
+			"type": "image",
+			"name": "sun_light_png"
+		},
+		{
+			"url": "assets/nextBtn.png",
+			"type": "image",
+			"name": "nextBtn_png"
+		},
+		{
+			"url": "assets/unhappyBtn.png",
+			"type": "image",
+			"name": "unhappyBtn_png"
+		},
+		{
+			"url": "assets/beauty_alpha.png",
+			"type": "image",
+			"name": "beauty_alpha_png"
+		},
+		{
+			"url": "assets/choiceA.png",
+			"type": "image",
+			"name": "choiceA_png"
+		},
+		{
+			"url": "assets/cafe_alpha.png",
+			"type": "image",
+			"name": "cafe_alpha_png"
+		},
+		{
+			"url": "assets/choiceB.png",
+			"type": "image",
+			"name": "choiceB_png"
+		},
+		{
+			"url": "assets/choiceC.png",
+			"type": "image",
+			"name": "choiceC_png"
+		},
+		{
+			"url": "assets/happyBtn.png",
+			"type": "image",
+			"name": "happyBtn_png"
+		},
+		{
+			"url": "assets/sport_alpha.png",
+			"type": "image",
+			"name": "sport_alpha_png"
+		},
+		{
+			"url": "assets/ss.png",
+			"type": "image",
+			"name": "ss_png"
+		},
+		{
+			"url": "assets/role_fail.png",
+			"type": "image",
+			"name": "role_fail_png"
+		},
+		{
+			"url": "assets/tieshi.png",
+			"type": "image",
+			"name": "tieshi_png"
+		},
+		{
+			"url": "assets/dog.png",
+			"type": "image",
+			"name": "dog_png"
+		},
+		{
+			"url": "assets/glass.png",
+			"type": "image",
+			"name": "glass_png"
+		},
+		{
+			"url": "assets/last_rebtn.png",
+			"type": "image",
+			"name": "last_rebtn_png"
+		},
+		{
+			"url": "assets/mijibtn.png",
+			"type": "image",
+			"name": "mijibtn_png"
+		},
+		{
+			"url": "assets/wrong.mp3",
+			"type": "sound",
+			"name": "wrong_mp3"
+		},
+		{
+			"url": "assets/right.mp3",
+			"type": "sound",
+			"name": "right_mp3"
+		},
+		{
+			"url": "assets/qie.mp3",
+			"type": "sound",
+			"name": "qie_mp3"
+		},
+		{
+			"url": "assets/bar.png",
+			"type": "image",
+			"name": "bar2_png"
+		},
+		{
+			"url": "assets/barBg.png",
+			"type": "image",
+			"name": "barBg2_png"
+		},
+		{
+			"url": "assets/beauty_alpha.png",
+			"type": "image",
+			"name": "beauty_alpha2_png"
+		},
+		{
+			"url": "assets/board.png",
+			"type": "image",
+			"name": "board3_png"
+		},
+		{
+			"url": "assets/board1.png",
+			"type": "image",
+			"name": "board12_png"
+		},
+		{
+			"url": "assets/board2.png",
+			"type": "image",
+			"name": "board22_png"
+		},
+		{
+			"url": "assets/button1.png",
+			"type": "image",
+			"name": "button12_png"
+		},
+		{
+			"url": "assets/cafe_alpha.png",
+			"type": "image",
+			"name": "cafe_alpha2_png"
+		},
+		{
+			"url": "assets/cardbg.jpg",
+			"type": "image",
+			"name": "cardbg2_jpg"
+		},
+		{
+			"url": "assets/card_back.png",
+			"type": "image",
+			"name": "card_back2_png"
+		},
+		{
+			"url": "assets/card_face.png",
+			"type": "image",
+			"name": "card_face2_png"
+		},
+		{
+			"url": "assets/choiceA.png",
+			"type": "image",
+			"name": "choiceA2_png"
+		},
+		{
+			"url": "assets/choiceB.png",
+			"type": "image",
+			"name": "choiceB2_png"
+		},
+		{
+			"url": "assets/choiceC.png",
+			"type": "image",
+			"name": "choiceC2_png"
+		},
+		{
+			"url": "assets/classBg.jpg",
+			"type": "image",
+			"name": "classBg2_jpg"
+		},
+		{
+			"url": "assets/cloud.png",
+			"type": "image",
+			"name": "cloud2_png"
+		},
+		{
+			"url": "assets/content.png",
+			"type": "image",
+			"name": "content2_png"
+		},
+		{
+			"url": "assets/dialog1.png",
+			"type": "image",
+			"name": "dialog12_png"
+		},
+		{
+			"url": "assets/dialog1_hero.png",
+			"type": "image",
+			"name": "dialog1_hero2_png"
+		},
+		{
+			"url": "assets/dialog_role.png",
+			"type": "image",
+			"name": "dialog_role2_png"
+		},
+		{
+			"url": "assets/dialog_roleLeft.png",
+			"type": "image",
+			"name": "dialog_roleLeft2_png"
+		},
+		{
+			"url": "assets/dialog_roleRight.png",
+			"type": "image",
+			"name": "dialog_roleRight2_png"
+		},
+		{
+			"url": "assets/dog.png",
+			"type": "image",
+			"name": "dog2_png"
+		},
+		{
+			"url": "assets/garden.png",
+			"type": "image",
+			"name": "garden2_png"
+		},
+		{
+			"url": "assets/glass.png",
+			"type": "image",
+			"name": "glass2_png"
+		},
+		{
+			"url": "assets/happyBtn.png",
+			"type": "image",
+			"name": "happyBtn2_png"
+		},
+		{
+			"url": "assets/last_rebtn.png",
+			"type": "image",
+			"name": "last_rebtn2_png"
+		},
+		{
+			"url": "assets/line.png",
+			"type": "image",
+			"name": "line2_png"
+		},
+		{
+			"url": "assets/loading_0.png",
+			"type": "image",
+			"name": "loading_02_png"
+		},
+		{
+			"url": "assets/loading_1.png",
+			"type": "image",
+			"name": "loading_12_png"
+		},
+		{
+			"url": "assets/loading_2.png",
+			"type": "image",
+			"name": "loading_22_png"
+		},
+		{
+			"url": "assets/loading_bg.jpg",
+			"type": "image",
+			"name": "loading_bg2_jpg"
+		},
+		{
+			"url": "assets/mijibtn.png",
+			"type": "image",
+			"name": "mijibtn2_png"
+		},
+		{
+			"url": "assets/nextBtn.png",
+			"type": "image",
+			"name": "nextBtn2_png"
+		},
+		{
+			"url": "assets/qie.mp3",
+			"type": "sound",
+			"name": "qie2_mp3"
+		},
+		{
+			"url": "assets/right.mp3",
+			"type": "sound",
+			"name": "right2_mp3"
+		},
+		{
+			"url": "assets/ring.png",
+			"type": "image",
+			"name": "ring2_png"
+		},
+		{
+			"url": "assets/role.png",
+			"type": "image",
+			"name": "rolepng"
+		},
+		{
+			"url": "assets/roleLeft.png",
+			"type": "image",
+			"name": "roleLeft2_png"
+		},
+		{
+			"url": "assets/roleRight.png",
+			"type": "image",
+			"name": "roleRight2_png"
+		},
+		{
+			"url": "assets/role_fail.png",
+			"type": "image",
+			"name": "role_fail2_png"
+		},
+		{
+			"url": "assets/schoolBg.jpg",
+			"type": "image",
+			"name": "schoolBg2_jpg"
+		},
+		{
+			"url": "assets/sg_hero.png",
+			"type": "image",
+			"name": "sg_hero2_png"
+		},
+		{
+			"url": "assets/shop_beauty.png",
+			"type": "image",
+			"name": "shop_beauty2_png"
+		},
+		{
+			"url": "assets/shop_cafe.png",
+			"type": "image",
+			"name": "shop_cafe2_png"
+		},
+		{
+			"url": "assets/shop_sport.png",
+			"type": "image",
+			"name": "shop_sport2_png"
+		},
+		{
+			"url": "assets/shop_teacher1.png",
+			"type": "image",
+			"name": "shop_teacher12_png"
+		},
+		{
+			"url": "assets/sport_alpha.png",
+			"type": "image",
+			"name": "sport_alpha2_png"
+		},
+		{
+			"url": "assets/ss.png",
+			"type": "image",
+			"name": "ss2_png"
+		},
+		{
+			"url": "assets/sun_light.png",
+			"type": "image",
+			"name": "sun_light2_png"
+		},
+		{
+			"url": "assets/teacher1_hand.png",
+			"type": "image",
+			"name": "teacher1_hand7_png"
+		},
+		{
+			"url": "assets/teacher1_hand0.png",
+			"type": "image",
+			"name": "teacher1_hand02_png"
+		},
+		{
+			"url": "assets/teacher1_hand1.png",
+			"type": "image",
+			"name": "teacher1_hand12_png"
+		},
+		{
+			"url": "assets/teacher1_hand2.png",
+			"type": "image",
+			"name": "teacher1_hand22_png"
+		},
+		{
+			"url": "assets/teacher1_hand3.png",
+			"type": "image",
+			"name": "teacher1_hand32_png"
+		},
+		{
+			"url": "assets/teacher1_hand4.png",
+			"type": "image",
+			"name": "teacher1_hand42_png"
+		},
+		{
+			"url": "assets/teacher1_hand5.png",
+			"type": "image",
+			"name": "teacher1_hand52_png"
+		},
+		{
+			"url": "assets/teacher1_hand6.png",
+			"type": "image",
+			"name": "teacher1_hand62_png"
+		},
+		{
+			"url": "assets/teacher_1.png",
+			"type": "image",
+			"name": "teacher_12_png"
+		},
+		{
+			"url": "assets/tieshi.png",
+			"type": "image",
+			"name": "tieshi2_png"
+		},
+		{
+			"url": "assets/unhappyBtn.png",
+			"type": "image",
+			"name": "unhappyBtn2_png"
+		},
+		{
+			"url": "assets/wrong.mp3",
+			"type": "sound",
+			"name": "wrong2_mp3"
+		},
+		{
+			"url": "assets/music/bg.mp3",
+			"type": "sound",
+			"name": "bg_mp3"
+		},
+		{
+			"url": "assets/role3.png",
+			"type": "image",
+			"name": "role3_png"
+		},
+		{
+			"url": "assets/role2.png",
+			"type": "image",
+			"name": "role2_png"
+		},
+		{
+			"url": "assets/role1.png",
+			"type": "image",
+			"name": "role1_png"
+		},
+		{
+			"url": "assets/dialog_last.png",
+			"type": "image",
+			"name": "dialog_last_png"
+		},
+		{
+			"url": "assets/logo_role.png",
+			"type": "image",
+			"name": "logo_role_png"
+		},
+		{
+			"url": "assets/arrow_left.png",
+			"type": "image",
+			"name": "arrow_left_png"
+		},
+		{
+			"url": "assets/arrow_right.png",
+			"type": "image",
+			"name": "arrow_right_png"
+		},
+		{
+			"url": "assets/goMusic.mp3",
+			"type": "sound",
+			"name": "goMusic_mp3"
+		},
+		{
+			"url": "assets/logo_sucess.png",
+			"type": "image",
+			"name": "logo_sucess_png"
+		},
+		{
+			"url": "assets/logo_fail.png",
+			"type": "image",
+			"name": "logo_fail_png"
+		}
+	]
+}

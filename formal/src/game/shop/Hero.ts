@@ -25,21 +25,32 @@ class Hero extends egret.Sprite{
             this.dialog.x=5;
             this.dialog.y=Util.h-330;
             this.tip=new egret.TextField();       
-            this.tip.x=80;
-            this.tip.y=Util.h-280;
+            this.tip.x=55;
+            this.tip.y=Util.h-250;
             this.tip.size=25;
             this.tip.textColor=0x000000
             this.tip.fontFamily="fzdhjt";
-            this.tip.width=250;
+            this.tip.width=300;
             
             // this.tip.anchorOffsetX=this.tip.width/2;
             // this.tip.anchorOffsetY=this.tip.height/2;
             this.tip.textAlign=egret.HorizontalAlign.LEFT;
             // this.tip.verticalAlign=egret.VerticalAlign.MIDDLE;
-            this.tip.text="";   
+            this.tip.textFlow = <Array<egret.ITextElement>>[
+                // {text:"店铺开业仅仅迈出了成功的第一步，招徕买家是有策略的，接下来你面临两关比拼，只有打败竞争对手才能成为终极赢家！\n",style:{"size":20}},
+                // {text:"        第一关规则Tips：\n",style:{"size":20}},
+                // {text:"将同类词两两配对（如",style:{"size":20}},
+                // {text:"苹果",style:{"size":20,"textColor":0xdb6638}},
+                // {text:"-",style:{"size":20}},
+                // {text:"香蕉",style:{"size":20,"textColor":0xdb6638}},
+                // {text:"），配对成功即可形成推广词组，招徕顾客。用时越短，获胜几率越高！",style:{"size":20}},
+                {text:"    招徕顾客是有策略的哦~\n",style:{"size":25}},
+                {text:"接下来两关比拼，只有打败竞争对",style:{"size":25}},
+                {text:"手才能成为终极赢家\n",style:{"size":25}},
+             ];   
             this.addChild(this.tip);  
             
-            TyperText.getInstance().typerEffect(this.tip,"规则Tips：将同类词两两配对（如苹果—香蕉），配对成功即可形成推广词组，招徕顾客。配对的时间越少奖励越多！",50);
+            // TyperText.getInstance().typerEffect(this.tip,"规则Tips：将同类词两两配对（如苹果—香蕉），配对成功即可形成推广词组，招徕顾客。配对的时间越少奖励越多！",10);
             
       
     }

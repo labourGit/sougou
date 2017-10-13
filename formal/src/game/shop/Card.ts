@@ -33,7 +33,7 @@ class Card extends egret.DisplayObjectContainer{
                   });
         }
     }
-    public sucess_light(){
+    public sucess_light(_color){
     //     var color:number = 0xdb6638;        /// 光晕的颜色，十六进制，不包含透明度
     //     var alpha:number = 0.8;             /// 光晕的颜色透明度，是对 color 参数的透明度设定。有效值为 0.0 到 1.0。例如，0.8 设置透明度值为 80%。
     //     var blurX:number = 15;              /// 水平模糊量。有效值为 0 到 255.0（浮点）
@@ -45,7 +45,7 @@ class Card extends egret.DisplayObjectContainer{
     //     var glowFilter= new egret.GlowFilter( color, alpha, blurX, blurY,
     // strength, quality, inner, knockout );
     //     this.face.filters=[glowFilter];
-            this.face.tip.textColor=0xdb6638;
+            this.face.tip.textColor=_color;
     }
 
 }

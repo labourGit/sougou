@@ -25,10 +25,10 @@ class Game extends egret.DisplayObjectContainer{
     public shopScene(){
         this.choiceGame=new ChoiceGame();
         this.addChild(this.choiceGame);
-        this.choiceGame.init();
     }
     public restart():void{
         (<Main>this.parent).restart();
+       
     }
     
 }

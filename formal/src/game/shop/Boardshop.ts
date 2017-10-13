@@ -3,9 +3,13 @@ class Boardshop extends egret.Sprite{
     private board:egret.Bitmap;
     public tip:egret.TextField;
     private str:string;
+    private _num:number;
     public constructor(string:string,_size:number){
         super();
         this.str=string;
+        this._num=_size;
+        this.tip=new egret.TextField(); 
+        this.tip.text=this.str;    
         this.board=new egret.Bitmap(RES.getRes("board1_png"));
         this.board.anchorOffsetX=this.board.width/2;
         this.board.anchorOffsetY=this.board.height/2;
@@ -20,10 +24,10 @@ class Boardshop extends egret.Sprite{
         
     }
     public show(){
-        this.tip=new egret.TextField();       
+           
         this.tip.x=320;
         this.tip.y=100;
-        this.tip.size=30;
+        this.tip.size=this._num;
         this.tip.textColor=0x000000
         this.tip.fontFamily="fzdhjt";
         this.tip.width=this.board.width-100;
@@ -32,7 +36,7 @@ class Boardshop extends egret.Sprite{
         this.tip.anchorOffsetY=this.tip.height/2;
         this.tip.textAlign=egret.HorizontalAlign.CENTER;
         this.tip.verticalAlign=egret.VerticalAlign.MIDDLE;
-        this.tip.text=this.str;     
+           
         this.addChild(this.tip);      
         // TyperText.getInstance().typerEffect(this.tip,"",100);
     }

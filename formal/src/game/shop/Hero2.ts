@@ -17,7 +17,7 @@ class Hero2 extends egret.Sprite{
         this.teacher.alpha=0;   
     }
     public init(){
-        var ta=egret.Tween.get(this.teacher).to({alpha:1,scaleX:1,scaleY:1},400,egret.Ease.backInOut).call(this.show,this)
+        var ta=egret.Tween.get(this.teacher).to({alpha:1,scaleX:1,scaleY:1},400,egret.Ease.backInOut).call(this.show,this);
     }
     private show(){
             this.dialog=new egret.Bitmap(RES.getRes("dialog1_hero_png"));
@@ -25,21 +25,28 @@ class Hero2 extends egret.Sprite{
             this.dialog.x=5;
             this.dialog.y=Util.h-330;
             this.tip=new egret.TextField();       
-            this.tip.x=80;
-            this.tip.y=Util.h-280;
+            this.tip.x=50;
+            this.tip.y=Util.h-290;
             this.tip.size=25;
             this.tip.textColor=0x000000
             this.tip.fontFamily="fzdhjt";
-            this.tip.width=250;
+            this.tip.width=320;
             
             // this.tip.anchorOffsetX=this.tip.width/2;
             // this.tip.anchorOffsetY=this.tip.height/2;
-            this.tip.textAlign=egret.HorizontalAlign.LEFT;
+            this.tip.textAlign=egret.HorizontalAlign.CENTER;
             // this.tip.verticalAlign=egret.VerticalAlign.MIDDLE;
-            this.tip.text="";   
+            this.tip.textFlow = <Array<egret.ITextElement>>[
+                {text:"第二关 游戏规则\n",style:{"bold":false}},
+                {text:"\n"},
+                {text:"选择你认为最能打动买家的\n"},
+                 {text:"选项，并与其他竞争者进\n"},     
+                 {text:"行PK。越受买家喜欢，则或\n"},
+                 {text:"胜几率越大！\n"},
+             ];   
             this.addChild(this.tip);  
             
-            TyperText.getInstance().typerEffect(this.tip,"规则Tips：下列选项中，请选择他她它可能最喜欢的广告内容，与其他竞争者进行PK，选择的内容越多人喜欢获得的分数越高",50);
+            // TyperText.getInstance().typerEffect(this.tip,"规则Tips：请选择最能打动买家的选项，根据你选择的结果与其他竞争者进行pk，越多买家喜欢获胜几率也将越大。",10);
             
       
     }

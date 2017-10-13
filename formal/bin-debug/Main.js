@@ -107,6 +107,7 @@ var Main = (function (_super) {
         this.removeChild(this.game);
         this.game = new Game();
         this.addChild(this.game);
+        Util.colors = [0xE76875, 0xFF8700, 0xddc733];
     };
     Main.prototype.loadps = function () {
         console.log("加载序列");
